@@ -271,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
     display: inline-block;
     padding: 12px 35px;
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 50px;
     color: #fff;
     background: #1977cc;
@@ -459,13 +459,13 @@ section {
 
 .section-title {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
 }
 
 .section-title h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     padding-bottom: 20px;
     position: relative;
     color: #2c4964;
@@ -658,4 +658,107 @@ section {
 
 .mobile-nav-active .mobile-nav-toggle i {
     color: #fff;
+}
+
+.signup {
+    margin-top: 100px;
+}
+
+.signup .signup-form {
+    width: 100%;
+    background: #fff;
+}
+
+.signup .signup-form .form-group {
+    padding-bottom: 1px;
+}
+
+.signup .signup-form input {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    height: 44px;
+}
+
+.signup .signup-form button[type="submit"] {
+    background: #1977cc;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+
+}
+
+.signup .signup-form button[type="submit"]:hover {
+    background: #1c84e3;
+
+}
+
+.signup .container .row .col-lg-8 {
+    margin: auto;
+}
+
+.signup {
+    padding-top: 30px
+}
+
+.signup .container {
+    max-width: 600px;
+}
+
+.signup .container .row.nt-5 {
+    margin-top: 15px; !important;
+}
+
+.signup .signup-form .signin {
+    padding-left: 0;
+    text-align: center;
+    margin-top: -12px;
+    margin-bottom: -18px;
+}
+
+.signup .signup-form .signin .link {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-left: 20px;
+}
+.send-btn {
+    margin: auto;
+    background: #1977cc;
+    color: #fff;
+    border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.send-btn:hover {
+    background: #166ab5;
+    color: #fff;
+}
+.signup .signup-form .signup-button {
+    margin-top: 20px;
+}
+
+.signup .signup-form button[type="submit"] {
+    background: #1977cc;
+    border: 0;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 150px;
+    margin-top: 10px;
+}
+
+@media (max-width: 414px) {
+    .signup .signup-form button[type="submit"] {
+        width: 100%;
+        height: 50px;
+        padding: 0;
+    }
 }
