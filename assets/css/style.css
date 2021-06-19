@@ -1,3 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -660,8 +667,25 @@ section {
     color: #fff;
 }
 
+.signup .container .row.mt-5 {
+    margin-top: 15px !important;
+}
+
+#main {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .signup {
-    margin-top: 100px;
+    padding-top: 100px
+}
+
+.signup {
+    display: table-cell;
+    vertical-align: middle;
+    width: 660px;
+
 }
 
 .signup .signup-form {
@@ -671,6 +695,28 @@ section {
 
 .signup .signup-form .form-group {
     padding-bottom: 1px;
+}
+
+.signup .signup-form .form-check {
+    padding-left: 0;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.signup .signup-form .form-check-input {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.signup .signup-form .form-check-label {
+    display: inline-block;
+    margin-top: 13px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-left: 20px;
 }
 
 .signup .signup-form input {
@@ -699,17 +745,13 @@ section {
     margin: auto;
 }
 
-.signup {
-    padding-top: 30px
-}
+
 
 .signup .container {
     max-width: 600px;
 }
 
-.signup .container .row.nt-5 {
-    margin-top: 15px; !important;
-}
+
 
 .signup .signup-form .signin {
     padding-left: 0;
@@ -760,5 +802,11 @@ section {
         width: 100%;
         height: 50px;
         padding: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .signup .container:nth-child(1) {
+        margin-top: 60px;
     }
 }
