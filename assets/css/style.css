@@ -677,15 +677,14 @@ section {
     margin: 0 auto;
 }
 
+
 .signup {
-    padding-top: 100px
+    width: 660px;
 }
 
-.signup {
+.center-form {
     display: table-cell;
     vertical-align: middle;
-    width: 660px;
-
 }
 
 .signup .signup-form {
@@ -746,11 +745,9 @@ section {
 }
 
 
-
 .signup .container {
     max-width: 600px;
 }
-
 
 
 .signup .signup-form .signin {
@@ -769,6 +766,7 @@ section {
     color: #555;
     margin-left: 20px;
 }
+
 .send-btn {
     margin: auto;
     background: #1977cc;
@@ -784,6 +782,7 @@ section {
     background: #166ab5;
     color: #fff;
 }
+
 .signup .signup-form .signup-button {
     margin-top: 20px;
 }
