@@ -39,8 +39,7 @@
                     <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
                     <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
                     <a href="#" class="skype"><i class="icofont-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i>
-                    </a>
+                    <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -56,9 +55,13 @@
 
                     </ul>
                 </nav>
-                <a href="#appointment" class="appointment-btn scrollto">Make an
-                    Appointment</a>
-
+                <a href="#appointment" class="appointment-btn scrollto">Make an Appointment</a>
+            </div>
+            <div class="alert alert-success" role="alert">
+                Registration was successful, <a href="#" class="alert-link">click here</a> to sign in.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span class="font-weight-light" aria-hidden="true">×</span>
+                </button>
             </div>
         </header>
 
@@ -77,23 +80,27 @@
                         <div class="col-lg-8 mt-5 mt-lg-0">
                             <form role="form" class="signup-form">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"/>
+                                    <input type="text" class="form-control is-invalid" name="name" id="name" placeholder="Your Name"/>
+                                    <div class="invalid-feedback"></div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Your Email"/>
+                                    <input type="text" class="form-control is-invalid" name="email" id="email" placeholder="Your Email"/>
+                                    <div class="invalid-feedback"></div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="Your Password"/>
+                                    <input type="password" class="form-control is-invalid" name="password" id="password" placeholder="Your Password"/>
+                                    <div class="invalid-feedback"></div>
                                 </div>
 
                                 <div class="form-check">
-                                    <input type="checkbox" name="terms" id="terms" class="form-check-input"/>
+                                    <input type="checkbox" name="terms" id="terms" class="form-check-input is-invalid"/>
                                     <label class="form-check-label" for="terms">
                                         I agree all statements in
                                         <a href="#" class="term-service">Terms of service</a>
                                     </label>
+                                    <div class="invalid-feedback"></div>
                                 </div>
 
                                 <div class="text-center signup-button">

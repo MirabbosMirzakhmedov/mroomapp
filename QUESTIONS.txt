@@ -1,0 +1,2 @@
+1) Step 4 document, final result of main.js does not match the actual result.
+2) I still have red borders around
