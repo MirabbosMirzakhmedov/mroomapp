@@ -53,7 +53,6 @@ $(document).ready((function ($) {
     } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
         $(".mobile-nav, .mobile-nav-toggle").hide();
     }
-
     function getFormData($form) {
         var data = {};
 
@@ -73,7 +72,6 @@ $(document).ready((function ($) {
         });
         return data;
     }
-
     $('.signup-button').click(function () {
         var $form = $('.signup-form'),
             data = getFormData($form),
@@ -85,17 +83,12 @@ $(document).ready((function ($) {
             type: 'POST',
             url: url,
             data: JSON.stringify(data),
-
             beforeSend: function () {
                 $form.find('input').each(function () {
                     $(this).removeClass('is-invalid');
                 })
             },
-
             success: function (res) {
-                console.log(res);
-                console.log('success');
-
                 $('#header .alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
@@ -104,11 +97,7 @@ $(document).ready((function ($) {
                     $(this).prop('checked', false);
                 })
             },
-
             error: function (res) {
-                console.log(res);
-                console.log('error');
-
                 $.each(res.responseJSON, function (fieldID, errorMessage) {
                     var $input = $('#' + fieldID),
                         $feedback = $input.parent().find('.invalid-feedback');
@@ -119,7 +108,6 @@ $(document).ready((function ($) {
         });
         return false;
     });
-
     $('.alert .close').click(function () {
         var $alert = $(this).parent();
 
