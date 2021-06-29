@@ -53,6 +53,7 @@ $(document).ready((function ($) {
     } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
         $(".mobile-nav, .mobile-nav-toggle").hide();
     }
+
     function getFormData($form) {
         var data = {};
 
@@ -72,6 +73,7 @@ $(document).ready((function ($) {
         });
         return data;
     }
+
     $('.signup-button').click(function () {
         var $form = $('.signup-form'),
             data = getFormData($form),
