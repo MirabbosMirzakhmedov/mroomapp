@@ -67,6 +67,12 @@ h1, h2, h3, h4, h5, h6 {
     border-left: 0;
 }
 
+@media (max-height: 767px) {
+    #topbar {
+        display: none!important;
+    }
+}
+
 #header {
     background: #fff;
     z-index: 997;
@@ -116,6 +122,12 @@ h1, h2, h3, h4, h5, h6 {
 
     #header .logo {
         font-size: 28px;
+    }
+}
+
+@media (max-height: 767px) {
+    #header {
+        top: 0;
     }
 }
 
@@ -260,7 +272,9 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     position: relative;
     margin-bottom: -200px;
+    background-position-y: -50px;
 }
+
 
 #hero .container {
     position: relative;
@@ -279,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #2c4964;
     margin: 10px 0 0 0;
     font-size: 24px;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 #hero .btn-get-started {
@@ -290,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
     display: inline-block;
     padding: 12px 35px;
-    margin-top: 10px;
+    margin-top: 30px;
     border-radius: 50px;
     color: #fff;
     background: #1977cc;
@@ -527,6 +541,7 @@ section {
     background: #1977cc;
     border-radius: 4px;
     color: #fff;
+    margin-top: 90px;
 }
 
 .why-us .content h3 {
@@ -703,6 +718,13 @@ section {
 .center-form {
     display: table-cell;
     vertical-align: middle;
+}
+
+@media (max-height: 680px) {
+    .center-form {
+        display: block;
+        margin-top: 60px;
+    }
 }
 
 .auth .auth-form {
