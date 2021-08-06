@@ -115,5 +115,8 @@ $(document).ready((function ($) {
 
         $alert.fadeOut();
         $alert.dequeue();
-    })
+    });
+
+    $('.venobox').venobox();
+
 })(jQuery));
