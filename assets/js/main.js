@@ -5,10 +5,10 @@ $(document).ready((function ($) {
         body = 'body';
 
     if ($(navMenu).length) {
-        var $mobile_nav = $(navMenu).clone().prop({
+        var $mobileNav = $(navMenu).clone().prop({
             class: 'mobile-nav d-lg-none'
         });
-        $(body).append($mobile_nav);
+        $(body).append($mobileNav);
         $(body).prepend(
             '<button ' +
             'type="button" ' +
@@ -68,7 +68,7 @@ $(document).ready((function ($) {
             'input[type="checkbox"]:not(:checked)'
         ).each(function () {
             if ($.inArray(this.name, data) === -1) {
-                data[this.name] = $(this).prop('checked')
+                data[this.name] = $(this).prop('checked');
             }
         });
         return data;
@@ -88,7 +88,7 @@ $(document).ready((function ($) {
             beforeSend: function () {
                 $form.find('input').each(function () {
                     $(this).removeClass('is-invalid');
-                })
+                });
             },
             success: function (res) {
                 $('#header .alert-success').fadeIn(function () {
@@ -97,7 +97,7 @@ $(document).ready((function ($) {
                 $form.find('input').each(function () {
                     $(this).val('');
                     $(this).prop('checked', false);
-                })
+                });
             },
             error: function (res) {
                 $.each(res.responseJSON, function (fieldID, errorMessage) {
