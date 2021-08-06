@@ -10,10 +10,10 @@ $(document).ready((function ($) {
 
 
     if ($(navMenu).length) {
-        var $mobile_nav = $(navMenu).clone().prop({
+        var $mobileNav = $(navMenu).clone().prop({
             class: 'mobile-nav d-lg-none'
         });
-        $(body).append($mobile_nav);
+        $(body).append($mobileNav);
         $(body).prepend(
             '<button ' +
             'type="button" ' +
@@ -73,7 +73,7 @@ $(document).ready((function ($) {
             'input[type="checkbox"]:not(:checked)'
         ).each(function () {
             if ($.inArray(this.name, data) === -1) {
-                data[this.name] = $(this).prop('checked')
+                data[this.name] = $(this).prop('checked');
             }
         });
         return data;
@@ -82,7 +82,7 @@ $(document).ready((function ($) {
     function removeFieldErrors() {
         $('.auth-form').find('input').each(function () {
             $(this).removeClass('is-invalid');
-        })
+        });
     }
 
     function showFieldErrors(res) {
@@ -106,7 +106,7 @@ $(document).ready((function ($) {
                     $(this).fadeOut(14000);
                 });
             }
-        })
+        });
     }
 
     $('.signup-button').click(function () {
@@ -128,14 +128,14 @@ $(document).ready((function ($) {
                 $form.find('input').each(function () {
                     $(this).val('');
                     $(this).prop('checked', false);
-                })
+                });
             },
             error: showFieldErrors,
         });
         return false;
     });
 
-    $('.send-btn').click(function () {
+    $('.signin-button').click(function () {
         var $form = $('.auth-form'),
             data = getFormData($form),
             host = 'http://127.0.0.1:8000/',
@@ -161,6 +161,6 @@ $(document).ready((function ($) {
 
         $alert.fadeOut();
         $alert.dequeue();
-    })
+    });
 
 })(jQuery));
