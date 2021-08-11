@@ -90,7 +90,7 @@ $(document).ready((function ($) {
                     $(this).removeClass('is-invalid');
                 });
             },
-            success: function (res) {
+            success: function () {
                 $('#header .alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
@@ -116,7 +116,5 @@ $(document).ready((function ($) {
         $alert.fadeOut();
         $alert.dequeue();
     });
-
-    $('.venobox').venobox();
 
 })(jQuery));
