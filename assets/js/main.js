@@ -121,7 +121,7 @@ $(document).ready((function ($) {
             url: url,
             data: JSON.stringify(data),
             beforeSend: removeFieldErrors,
-            success: function (res) {
+            success: function () {
                 $('#header .alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
