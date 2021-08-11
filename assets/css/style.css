@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     height: 40px;
     font-size: 14px;
+    transition: all 0.5s;
 }
 
 #topbar.topbar-scrolled {
@@ -69,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header {
     background: #fff;
+    transition: all 0.5s;
     z-index: 997;
     padding: 15px 0;
     top: 40px;
@@ -240,7 +242,6 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 0;
     }
 }
-
 
 .appointment-btn {
     margin-left: 25px;
@@ -597,45 +598,43 @@ section {
     font-size: 15px;
     color: #848484;
 }
-
-/*Barbers section*/
-.doctors {
+.barbers {
     background: #fff;
 }
 
-.doctors .member {
+.barbers .member {
     position: relative;
     box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
     padding: 30px;
     border-radius: 10px;
 }
 
-.doctors .member .pic {
+.barbers .member .pic {
     overflow: hidden;
     width: 180px;
     border-radius: 50%;
 }
 
-.doctors .member .pic img {
+.barbers .member .pic img {
     transition: ease-in-out 0.3s;
 }
 
-.doctors .member:hover img {
+.barbers .member:hover img {
     transform: scale(1.1);
 }
 
-.doctors .member .member-info {
+.barbers .member .member-info {
     padding-left: 30px;
 }
 
-.doctors .member h4 {
+.barbers .member h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
     color: #2c4964;
 }
 
-.doctors .member span {
+.barbers .member span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
@@ -643,7 +642,7 @@ section {
     font-weight: 500;
 }
 
-.doctors .member span::after {
+.barbers .member span::after {
     content: '';
     position: absolute;
     display: block;
@@ -654,19 +653,19 @@ section {
     left: 0;
 }
 
-.doctors .member p {
+.barbers .member p {
     margin: 10px 0 0 0;
     font-size: 14px;
 }
 
-.doctors .member .social {
+.barbers .member .social {
     margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.doctors .member .social a {
+.barbers .member .social a {
     transition: ease-in-out 0.3s;
     display: flex;
     align-items: center;
@@ -677,21 +676,25 @@ section {
     background: #a0bcd5;
 }
 
-.doctors .member .social a i {
+.barbers .member .social a i {
     color: #fff;
     font-size: 16px;
     margin: 0 2px;
 }
 
-.doctors .member .social a:hover {
+.barbers .member .social a:hover {
     background: #1977cc;
 }
 
-.doctors .member .social a + a {
+.barbers .member .social a + a {
     margin-left: 8px;
 }
 
-/*Services section*/
+#barbers::before {
+    content: "";
+    display: block;
+    height: 79px;
+}
 
 .services .icon-box {
     text-align: center;
@@ -769,19 +772,21 @@ section {
     color: #fff;
 }
 
+#services::before {
+    content: "";
+    display: block;
+    height: 79px;
+}
 
-/*--------------------------------------------------------------
-# Appointments
---------------------------------------------------------------*/
-.appointment .php-email-form {
+.appointment .appointment-form {
   width: 100%;
 }
 
-.appointment .php-email-form .form-group {
+.appointment .appointment-form .form-group {
   padding-bottom: 8px;
 }
 
-.appointment .php-email-form .validate {
+.appointment .appointment-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -789,7 +794,7 @@ section {
   font-size: 13px;
 }
 
-.appointment .php-email-form .error-message {
+.appointment .appointment-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -798,11 +803,11 @@ section {
   font-weight: 600;
 }
 
-.appointment .php-email-form .error-message br + br {
+.appointment .appointment-form .error-message br + br {
   margin-top: 25px;
 }
 
-.appointment .php-email-form .sent-message {
+.appointment .appointment-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -811,14 +816,14 @@ section {
   font-weight: 600;
 }
 
-.appointment .php-email-form .loading {
+.appointment .appointment-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.appointment .php-email-form .loading:before {
+.appointment .appointment-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -831,26 +836,26 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.appointment .php-email-form input, .appointment .php-email-form textarea, .appointment .php-email-form select {
+.appointment .appointment-form input, .appointment .appointment-form textarea, .appointment .appointment-form select {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
 }
 
-.appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
+.appointment .appointment-form input:focus, .appointment .appointment-form textarea:focus, .appointment .appointment-form select:focus {
   border-color: #1977cc;
 }
 
-.appointment .php-email-form input, .appointment .php-email-form select {
+.appointment .appointment-form input, .appointment .appointment-form select {
   height: 44px;
 }
 
-.appointment .php-email-form textarea {
+.appointment .appointment-form textarea {
   padding: 10px 12px;
 }
 
-.appointment .php-email-form button[type="submit"] {
+.appointment .appointment-form button[type="submit"] {
   background: #1977cc;
   border: 0;
   padding: 10px 35px;
@@ -859,14 +864,16 @@ section {
   border-radius: 50px;
 }
 
-.appointment .php-email-form button[type="submit"]:hover {
+.appointment .appointment-form button[type="submit"]:hover {
   background: #1c84e3;
 }
 
+#appointment::before {
+    content: "";
+    display: block;
+    height: 79px;
+}
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
 #footer {
     color: #444444;
     font-size: 14px;
@@ -1021,7 +1028,6 @@ section {
     text-decoration: none;
 }
 
-
 @keyframes pulsate-btn {
     0% {
         transform: scale(0.6, 0.6);
@@ -1140,7 +1146,7 @@ section {
     margin-top: 15px !important;
 }
 
-#main {
+.form-page {
     display: table;
     height: 100%;
     margin: 0 auto;
