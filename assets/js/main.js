@@ -163,4 +163,14 @@ $(document).ready((function ($) {
         $alert.dequeue();
     });
 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#header').addClass('header-scrolled');
+            $('#topbar').addClass('topbar-scrolled');
+        } else {
+            $('#header').removeClass('header-scrolled');
+            $('#topbar').removeClass('topbar-scrolled');
+        }
+    });
+
 })(jQuery));
