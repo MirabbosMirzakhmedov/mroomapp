@@ -340,8 +340,11 @@
                 <div class="container d-md-flex py-4">
                     <div class="mr-md-auto text-center text-md-left">
                         <div class="copyright">
-                            <strong><span>Mroom</span></strong> &copy; 2021 by <a href="https://www.linkedin.com/in/mirabbos/" target="_blank">Mirabbos Mirzakhmedov</a>
+                            <strong><span>Mroom</span></strong> &copy; <span id="year"></span> by <a href="https://www.linkedin.com/in/mirabbos/" target="_blank">Mirabbos Mirzakhmedov</a>
                         </div>
+                        <script>
+                            document.getElementById('year').innerHTML = new Date().getFullYear();
+                        </script>
                     </div>
                     <div class="social-links text-center text-md-right pt-3 pt-md-0">
                         <a href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
