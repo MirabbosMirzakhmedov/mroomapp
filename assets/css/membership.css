@@ -17,8 +17,19 @@
     border-radius: 50px;
 }
 
+.row {
+    padding-top: 10px;
+}
+
 .btn-custom:hover {
     background: #3291e6;
+}
+
+.btn-text {
+    color: white;
+}
+.btn-text:hover {
+    color: white;
 }
 
 .price-box {

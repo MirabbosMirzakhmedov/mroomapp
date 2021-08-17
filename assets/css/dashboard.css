@@ -94,3 +94,8 @@ a:hover {
 .badge-danger {
     background-color: #d44d47;
 }
+
+.active-tab {
+    color: #1977cc;
+    border-color: #1977cc;
+}
