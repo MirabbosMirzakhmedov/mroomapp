@@ -1,49 +1,3 @@
-/*------------------------------------------------------------------
- [Master Stylesheet]
-
-  Project:	Label Admin Template Free
-  Version:	1.0
--------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
-  ===== Table of Contents =====
-
-  * Bootstrap Functions & Variables
-  * Theme Variables
-  * Bootstrap Main
-  * Core Files And Mixins
-  * Component Styles
-    + Badge
-    + Breadcrumbs
-    + Buttons
-    + Cards
-    + Dropdowns
-    + Checkbox Radio
-    + Inputs
-    + Progress Bars
-    + Tables
-    + Timeline
-    + Tooltip
-  * Template
-  * Utilities
-  * Demo
-  * Pages
-    + Authentication Pages
-    + Error Pages
-    + Dashboard
-    + Documentation
-
--------------------------------------------------------------------*/
-/* === Bootstrap Functions & Variables === */
-/*-------------------------------------------------------------------*/
-/* === Theme Variables === */
-/*-------------------------------------------------------------------*/
-/* === Bootstrap Main === */
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7241,8 +7195,6 @@ a.text-white:hover, a.text-white:focus {
     color: inherit;
     border-color: #f2f4f9; } }
 
-/*-------------------------------------------------------------------*/
-/* === Core Files And Mixins === */
 .bg-inverse-primary {
   background: rgba(105, 111, 251, 0.2); }
 
@@ -7270,7 +7222,6 @@ a.text-white:hover, a.text-white:focus {
 .bg-inverse-white {
   background: rgba(255, 255, 255, 0.2); }
 
-/* Reset */
 body {
   padding: 0;
   margin: 0;
@@ -7495,7 +7446,6 @@ h6,
 p {
   margin-bottom: 0; }
 
-/* Typography */
 body,
 html {
   -webkit-font-smoothing: antialiased;
@@ -7989,13 +7939,9 @@ textarea {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); } }
 
-/*-------------------------------------------------------------------*/
-/* === Component Styles === */
-/* Badges */
 .badge.badge-danger, .badge.badge-success {
   color: #fff; }
 
-/* Breadcrumbs */
 .breadcrumb {
   background: #fff; }
   .breadcrumb.has-arrow .breadcrumb-item:before {
@@ -8006,7 +7952,6 @@ textarea {
   .breadcrumb.has-arrow .breadcrumb-item:first-child:before {
     display: none; }
 
-/* Buttons */
 .btn:not(.social-icon-btn).social-btn-outlined.btn-twitter {
   border: 2px solid #55acee;
   color: #101010; }
@@ -8507,14 +8452,12 @@ textarea {
   .btn.btn-rounded {
     border-radius: 50px; }
 
-/* Cards */
 .card {
   background: #fff;
   border: none; }
   .card.card-bordered {
     border: 1px solid #f2f4f9; }
 
-/* Checkbox Radio */
 .checkbox,
 .radio {
   position: relative;
@@ -8676,7 +8619,6 @@ textarea {
 .form-inline .form-check-input {
   display: none; }
 
-/* Dropdowns */
 .dropdown-toggle-split.btn-primary {
   background: #4149fa;
   border-color: #4149fa; }
@@ -8944,7 +8886,6 @@ textarea {
       letter-spacing: 0;
       font-weight: 500; }
 
-/* Inputs */
 .form-control {
   padding-left: 20px;
   padding-right: 20px;
@@ -9032,7 +8973,6 @@ textarea {
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
   background: #696ffb; }
 
-/* Progress Bars */
 .progress {
   border-radius: 10px;
   height: 13px;
@@ -9045,7 +8985,6 @@ textarea {
   .progress.progress-slim {
     height: 5px; }
 
-/* Tables */
 .table,
 table {
   margin-bottom: 0; }
@@ -9166,7 +9105,6 @@ table {
     table.info-table tr th.actions {
       padding-left: 0; }
 
-/* Timeline */
 .timeline-vertical {
   width: calc(100% + 30px);
   padding-right: 30px;
@@ -9258,8 +9196,6 @@ table {
 .tooltip .tooltip-inner {
   box-shadow: 0px 0px 10px 2px rgba(16, 16, 16, 0.25); }
 
-/*-------------------------------------------------------------------*/
-/* Template */
 .logo {
   display: block;
   margin: 0 auto;
@@ -9363,7 +9299,6 @@ table {
   .content-preview.rounded {
     border-radius: 100%; }
 
-/* Utilities */
 .profile-img.bg-inverse-primary {
   color: #696ffb; }
 
@@ -9661,7 +9596,6 @@ table {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
 
-/* Demo */
 .demo-wrapper {
   margin-bottom: -10px; }
   .demo-wrapper .demo-description {
@@ -9878,8 +9812,6 @@ table {
 .purchase-banner-active .page-body {
   top: 55px; }
 
-/* === Pages === */
-/* Authentication Pages */
 .authentication-theme .signup-link {
   margin: 20px auto 0px auto;
   text-align: center;
@@ -9910,7 +9842,6 @@ table {
     left: 0;
     right: 0; }
 
-/* Error Pages */
 .error_page.error_2 {
   display: flex;
   align-items: stretch;
@@ -9944,12 +9875,10 @@ table {
     .error_page.error_2 .inner-wrapper .btn {
       margin: 30px auto 0 auto; }
 
-/* Dashboard */
 .dashboard-timeline {
   max-height: 250px;
   overflow-y: auto; }
 
-/* Documentation */
 .docs-body .doc-content-wrapper {
   position: relative;
   display: grid;
@@ -10103,7 +10032,3 @@ table {
           padding-right: 0; }
           .docs-body .doc-content-wrapper .doc-content-section .doc-content-section-inner section {
             padding-top: 80px; } }
-
-/*-------------------------------------------------------------------*/
-
-/*# sourceMappingURL=style.css.map */

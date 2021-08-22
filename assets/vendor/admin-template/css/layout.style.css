@@ -25,7 +25,6 @@
 .bg-inverse-white {
   background: rgba(255, 255, 255, 0.2); }
 
-/* Header */
 .t-header {
   display: flex;
   height: 65px;
@@ -178,7 +177,6 @@
   .header-fixed .sidebar .navigation-menu {
     z-index: 1; }
 
-/* Sidebar */
 .sidebar {
   position: relative;
   display: block;
@@ -331,7 +329,6 @@
           -webkit-transform: rotate(90deg);
                   transform: rotate(90deg); }
 
-/* Footer */
 footer {
   position: absolute;
   bottom: 0px;
@@ -359,7 +356,6 @@ footer {
         letter-spacing: 0.03rem;
         color: #565656; }
 
-/* Layout */
 .page-body {
   background: #fff; }
 
@@ -491,5 +487,3 @@ footer {
 @media (max-width: 767.98px) {
   .page-body .page-content-wrapper {
     padding: 80px 20px 0px 20px; } }
-
-/*# sourceMappingURL=style.css.map */
