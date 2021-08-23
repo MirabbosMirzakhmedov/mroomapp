@@ -1,38 +1,39 @@
-.price span {
+.product span {
     font-size: 16px;
     color: #565656;
 }
 
-.product-title, .product-description, .price {
-    margin-bottom: 15px;
+.product .product-title, .product-description, .price {
+    padding-top: 15px;
 }
 
-#info {
-    margin-left: 20px;
+.product .membership-btn {
+    text-align: center;
+    padding-top: 20px;
 }
 
-.upgrade-btn {
+.product .membership-btn .btn {
     color: #ffffff;
     background: #1977cc;
     border-radius: 50px;
+    align-items: center;
+
+    padding: 10px 150px;
+    margin-top: 20px;
 }
 
-.upgrade-btn:hover {
+.membership-btn .btn:hover {
     color: #ffffff;
     background: #3291e6;
 }
 
-@media screen and (max-width: 996px) {
-    .preview {
-        margin-bottom: 20px;
-    }
+.product .wrapper {
+    padding: 40px;
+    background: #fbfcfd;
 }
 
-@media screen and (min-width: 997px) {
-    .wrapper {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
+.product .membership-card {
+    width: 100%;
+    object-fit: contain;
+    max-width: 400px;
 }
