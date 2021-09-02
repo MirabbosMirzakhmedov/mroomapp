@@ -99,3 +99,21 @@ a:hover {
     color: #1977cc;
     border-color: #1977cc;
 }
+
+.terms-section,
+.terms-header {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    align-content: center;
+}
+
+.mroom_contact {
+    margin: 1.2em 0 .8em;
+}
+
+#information {
+    padding-left: 0;
+}
