@@ -1,0 +1,135 @@
+.product span {
+    font-size: 16px;
+    color: #565656;
+}
+
+.product .product-title, .product-description {
+    padding-top: 15px;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .product .product-title {
+        text-align: center;
+    }
+}
+
+.product .price {
+    margin-top: 3px;
+}
+
+@media (max-width: 320px) {
+    .product .price {
+        margin-top: 1px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .product .price {
+        margin-top: 10px;
+    }
+}
+
+.product .membership-btn {
+    text-align: center;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .product .membership-btn {
+        text-align: right;
+    }
+}
+
+.product .membership-btn .btn {
+    color: #ffffff;
+    background: #1977cc;
+    border-radius: 50px;
+    align-items: center;
+}
+
+.product .details .row {
+    padding-top: 20px;
+    max-width: 470px;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .product .details{
+        display: block;
+        margin: auto;
+        position: initial;
+        width: auto;
+        flex: initial;
+    }
+}
+
+.membership-btn .btn:hover {
+    color: #ffffff;
+    background: #3291e6;
+}
+
+.product .wrapper {
+    padding: 40px;
+    background: #fbfcfd;
+}
+
+.product .membership-card {
+    width: 100%;
+    object-fit: contain;
+    max-width: 400px;
+}
+
+.product .product-description ul {
+    list-style-type: initial;
+    padding: 0;
+    padding-left: 18px;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .product .col-lg-12:nth-child(1){
+        text-align: center;
+    }
+}
+
+.product figure {
+    overflow: hidden;
+}
+
+.product figure:hover + span {
+    bottom: -36px;
+    opacity: 1;
+}
+
+.shine-effect figure {
+    position: relative;
+}
+
+.shine-effect figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.shine-effect figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
