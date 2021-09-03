@@ -451,3 +451,11 @@ h1, h2, h3, h4, h5, h6, b {
     color: #fff;
     text-decoration: none;
 }
+
+#terms-text {
+    padding: 100px 340px 0 340px;
+}
+
+.section {
+    padding-top: 60px;
+}
