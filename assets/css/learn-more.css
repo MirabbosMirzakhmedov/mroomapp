@@ -22,10 +22,6 @@ h1, h2, h3, h4, h5, h6, b {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#row {
-    padding-top: 150px;
-}
-
 #topbar {
     background: #fff;
     height: 40px;
@@ -452,10 +448,66 @@ h1, h2, h3, h4, h5, h6, b {
     text-decoration: none;
 }
 
-#terms-text {
-    padding: 100px 340px 0 340px;
+/*.section-title {*/
+/*    padding-top: 150px;*/
+/*    text-align: center;*/
+/*    padding-bottom: 5px;*/
+
+/*}*/
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #2c4964;
+
 }
 
-.section {
-    padding-top: 60px;
+.section-title h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #1977cc;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.section-title p {
+    margin-bottom: 20px;
+
+}
+
+.section-title .description {
+    font-size: 14px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.center-form {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media (max-height: 680px) {
+    .center-form {
+        display: block;
+        margin-top: 60px;
+    }
 }
