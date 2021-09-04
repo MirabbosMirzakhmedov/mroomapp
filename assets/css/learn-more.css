@@ -4,11 +4,6 @@ html, body {
     padding: 0;
 }
 
-body {
-    font-family: "Open Sans", sans-serif;
-    color: #444444;
-}
-
 a {
     color: #1977cc;
 }
@@ -294,12 +289,6 @@ h1, h2, h3, h4, h5, h6, b {
     }
 }
 
-#footer {
-    color: #444444;
-    font-size: 14px;
-    background: #f1f7fd;
-}
-
 #footer .footer-top {
     padding: 100px 0 0 0;
     background: #fff;
@@ -448,13 +437,6 @@ h1, h2, h3, h4, h5, h6, b {
     text-decoration: none;
 }
 
-/*.section-title {*/
-/*    padding-top: 150px;*/
-/*    text-align: center;*/
-/*    padding-bottom: 5px;*/
-
-/*}*/
-
 .section-title h2 {
     font-size: 32px;
     font-weight: bold;
@@ -500,13 +482,14 @@ h1, h2, h3, h4, h5, h6, b {
     margin-bottom: 10px;
 }
 
-.center-form {
-    display: table-cell;
+.price-form {
+    margin-top: 60px;
+    display: block;
     vertical-align: middle;
 }
 
 @media (max-height: 680px) {
-    .center-form {
+    .price-form {
         display: block;
         margin-top: 60px;
     }

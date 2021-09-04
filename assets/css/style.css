@@ -1320,3 +1320,22 @@ section {
         margin-top: 60px;
     }
 }
+
+.row .icon-box .price-box {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.row .icon-box:hover,
+.row .icon-box:focus,
+.row .icon-box:active {
+  box-shadow: 0 0 8px #4792d6;
+}
+
+
