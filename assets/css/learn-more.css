@@ -484,6 +484,7 @@ h1, h2, h3, h4, h5, h6, b {
 
 .price-form {
     margin-top: 60px;
+    /*padding-top: 30px;*/
     display: block;
     vertical-align: middle;
 }
