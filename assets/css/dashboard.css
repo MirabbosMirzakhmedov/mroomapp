@@ -100,20 +100,11 @@ a:hover {
     border-color: #1977cc;
 }
 
-.terms-section,
-.terms-header {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    align-content: center;
+.terms-section {
+    margin-top: 16px;
+    text-align: justify;
 }
 
-.mroom_contact {
-    margin: 1.2em 0 .8em;
-}
-
-#information {
+.information .col-12 {
     padding-left: 0;
 }
