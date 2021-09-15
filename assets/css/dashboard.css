@@ -55,6 +55,15 @@ a:hover {
     text-align: center;
 }
 
+.navbar-dropdown .dropdown-header .dropdown-title-text {
+    color: #1977cc!important;
+}
+
+.navbar-dropdown .dropdown-header .dropdown-title-text:hover {
+    color: #3291e6!important;
+}
+
+
 .sidebar .navigation-menu li.active a .link-title {
     color: #1977cc;
 }
@@ -108,3 +117,5 @@ a:hover {
 .information .col-12 {
     padding-left: 0;
 }
+
+

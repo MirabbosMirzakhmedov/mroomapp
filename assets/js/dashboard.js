@@ -7,6 +7,26 @@ $(document).ready((function ($) {
         $('.page-body').toggleClass('sidebar-collpased');
     });
 
+    $('.signout-button').click(function () {
+        var host = 'http://127.0.0.1:8000/',
+            path = 'api/signout/',
+            url = host + path;
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            xhrFields: {withCredentials: true},
+            success: function (res) {
+                console.log(res);
+                console.log('success');
+            },
+            error: function (res) {
+                console.log(res);
+                console.log('error');
+            }
+        });
+    });
+
     var statsLineOptions = {
         scales: {
             responsive: false,
