@@ -1,6 +1,16 @@
 $(document).ready((function ($) {
     'use strict';
 
+    var port = (window.location.port) ? ':' + window.location.port : '',
+    appHost = window.location.protocol + '//' +
+        window.location.hostname +
+        port;
+
+    function signOut() {
+    window.location.href = appHost;
+    }
+
+
     var $mobileToggler = $('.t-header-mobile-toggler');
 
     $mobileToggler.on('click', function () {
@@ -16,14 +26,8 @@ $(document).ready((function ($) {
             type: 'POST',
             url: url,
             xhrFields: {withCredentials: true},
-            success: function (res) {
-                console.log(res);
-                console.log('success');
-            },
-            error: function (res) {
-                console.log(res);
-                console.log('error');
-            }
+            success: signOut,
+            error: signOut
         });
     });
 
