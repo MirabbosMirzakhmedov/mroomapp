@@ -14,10 +14,9 @@
         <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
         <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
-
     </head>
     <body>
-        <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="d-none d-lg-flex align-items-center fixed-top" id="topbar">
             <div class="container d-flex">
                 <div class="contact-info mr-auto">
                     <i class="icofont-envelope"></i> <a
@@ -26,42 +25,41 @@
                     <i class="icofont-google-map"></i> Riga, Latvia.
                 </div>
                 <div class="social-links">
-                    <a href="https://twitter.com/" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
-                    <a href="https://facebook.com/" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
-                    <a href="https://instagram.com/" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
-                    <a href="https://skype.com/" target="_blank" class="skype"><i class="icofont-skype"></i></a>
-                    <a href="https://linkedin.com/" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></a>
-                    <a href="https://youtube.com/" target="_blank" class="youtube"><i class="icofont-youtube-play"></i></a>
+                    <a class="twitter" href="https://twitter.com/" target="_blank"><i class="icofont-twitter"></i></a>
+                    <a class="facebook" href="https://facebook.com/" target="_blank"><i class="icofont-facebook"></i></a>
+                    <a class="instagram" href="https://instagram.com/" target="_blank"><i class="icofont-instagram"></i></a>
+                    <a class="skype" href="https://skype.com/" target="_blank"><i class="icofont-skype"></i></a>
+                    <a class="linkedin" href="https://linkedin.com/" target="_blank"><i class="icofont-linkedin"></i></a>
+                    <a class="youtube" href="https://youtube.com/" target="_blank"><i class="icofont-youtube-play"></i></a>
                 </div>
             </div>
         </div>
-        <header id="header" class="fixed-top">
+        <header class="fixed-top" id="header">
             <div class="container d-flex align-items-center">
                 <h1 class="logo mr-auto"><a href="/">MROOM</a></h1>
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
                         <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/signin/">Sign In</a></li>
-                        <li><a href="/signup/">Sign Up</a></li>
+                        <li><a href="/membership">Membership</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+                        <li><a href="/signup">Sign Up</a></li>
                     </ul>
                 </nav>
-                <a href="#appointment" class="appointment-btn scrollto">
+                <a class="appointment-btn scrollto" href="#appointment">
                     Make an Appointment
                 </a>
             </div>
         </header>
-        <section id="hero" class="d-flex align-items-center">
+        <section class="d-flex align-items-center" id="hero">
             <div class="container">
                 <h1>Welcome to MRoom</h1>
                 <h2>We offer high-quality barber services and products, designed specifically for men.</h2>
-                <a href="#about" class="btn-get-started scrollto">Get
-                    Started</a>
+                <a class="btn-get-started scrollto" href="signup">Get Started</a>
             </div>
         </section>
         <main id="main">
-            <section id="why-us" class="why-us">
+            <section class="why-us" id="why-us">
                 <div class="container">
-
                     <div class="row">
                         <div class="col-lg-4 d-flex align-items-stretch">
                             <div class="content">
@@ -75,7 +73,7 @@
                                     Services always without appointment!
                                 </p>
                                 <div class="text-center">
-                                    <a href="#" class="more-btn">Learn More <i
+                                    <a class="more-btn" href="membership">Learn More <i
                                             class="bx bx-chevron-right"></i></a>
                                 </div>
                             </div>
@@ -84,30 +82,33 @@
                             <div class="icon-boxes d-flex flex-column justify-content-center">
                                 <div class="row">
                                     <div class="col-xl-4 d-flex align-items-stretch">
-                                        <div class="icon-box mt-4 mt-xl-0">
+                                        <div class="icon-box mt-4 mt-xl-0" id="adj1">
                                             <i class="bx bx-receipt"></i>
                                             <h4>Without appointment</h4>
                                             <p>Connect yourself to the queue.
                                                 Choose your preferred Mroom service and
-                                                arrive on time indicated by Mroom.</p>
+                                                arrive on time indicated by Mroom.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 d-flex align-items-stretch">
-                                        <div class="icon-box mt-4 mt-xl-0">
+                                        <div class="icon-box mt-4 mt-xl-0" id="adj2">
                                             <i class="bx bx-cube-alt"></i>
                                             <h4>Own cutting technique</h4>
                                             <p>Barbers at Mroom follow trends while always
                                                 maintaining the same principles of affordable,
-                                                high quality grooming done by professionals.</p>
+                                                high quality grooming done by professionals.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 d-flex align-items-stretch">
-                                        <div class="icon-box mt-4 mt-xl-0">
+                                        <div class="icon-box mt-4 mt-xl-0" id="adj3">
                                             <i class="bx bx-gift"></i>
                                             <h4>Members get more</h4>
                                             <p>The options for membership are platinum,
                                                 gold and silver, with pricing for juniors,
-                                                seniors, students, and fathers with sons.</p>
+                                                seniors, students, and fathers with sons.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +117,7 @@
                     </div>
                 </div>
             </section>
-            <section id="barbers" class="barbers">
+            <section class="barbers" id="barbers">
                 <div class="container">
                     <div class="section-title">
                         <h2>Barbers</h2>
@@ -128,7 +129,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="member d-flex align-items-start">
-                                <div class="pic"><img src="assets/img/barbers/john.jpg" class="img-fluid" alt=""></div>
+                                <div class="pic"><img alt="" class="img-fluid" src="assets/img/barbers/john.jpg"></div>
                                 <div class="member-info">
                                     <h4>John Lewis</h4>
                                     <span>Senior Barber</span>
@@ -144,7 +145,7 @@
                         </div>
                         <div class="col-lg-6 mt-4 mt-lg-0">
                             <div class="member d-flex align-items-start">
-                                <div class="pic"><img src="assets/img/barbers/miko.jpg" class="img-fluid" alt=""></div>
+                                <div class="pic"><img alt="" class="img-fluid" src="assets/img/barbers/miko.jpg"></div>
                                 <div class="member-info">
                                     <h4>Miko Alvares</h4>
                                     <span>Senior Barber</span>
@@ -160,7 +161,7 @@
                         </div>
                         <div class="col-lg-6 mt-4">
                             <div class="member d-flex align-items-start">
-                                <div class="pic"><img src="assets/img/barbers/steven.jpg" class="img-fluid" alt=""></div>
+                                <div class="pic"><img alt="" class="img-fluid" src="assets/img/barbers/steven.jpg"></div>
                                 <div class="member-info">
                                     <h4>Steven Anderson</h4>
                                     <span>Management</span>
@@ -176,7 +177,7 @@
                         </div>
                         <div class="col-lg-6 mt-4">
                             <div class="member d-flex align-items-start">
-                                <div class="pic"><img src="assets/img/barbers/julia.jpg" class="img-fluid" alt=""></div>
+                                <div class="pic"><img alt="" class="img-fluid" src="assets/img/barbers/julia.jpg"></div>
                                 <div class="member-info">
                                     <h4>Julia Romanova</h4>
                                     <span>Junior Barber</span>
@@ -193,7 +194,7 @@
                     </div>
                 </div>
             </section>
-            <section id="services" class="services">
+            <section class="services" id="services">
                 <div class="container">
                     <div class="section-title">
                         <h2>Services</h2>
@@ -208,7 +209,7 @@
                             <div class="icon-box">
                                 <div class="icon"><i class="icofont-favourite"></i></div>
                                 <h4><a href="">Haircut</a></h4>
-                                <p>Hair cut using MRoom's own unique haircutting technique.</p>
+                                <p>Hair cut using MRoom"s own unique haircutting technique.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
@@ -249,33 +250,33 @@
                     </div>
                 </div>
             </section>
-            <section id="appointment" class="appointment section-bg">
+            <section class="appointment section-bg" id="appointment">
                 <div class="container">
                     <div class="section-title">
                         <h2>Make an Appointment</h2>
                         <p>
-                            Mroom Barbershop welcomes walk-in clients any time there is availability and barber doesn't have an appointment scheduled.
+                            Mroom Barbershop welcomes walk-in clients any time there is availability and barber doesn"t have an appointment scheduled.
                             If you make an appointment you are guaranteed to be served by your barber of choice at the time that best suits you.
                         </p>
                     </div>
-                    <form action="" method="post" role="form" class="appointment-form">
+                    <form action="" class="appointment-form" method="post" role="form">
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your full name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="name" name="name" placeholder="Your full name" type="text">
                                 <div class="validate"></div>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your phone number" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="phone" name="phone" placeholder="Your phone number" type="tel">
                                 <div class="validate"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input type="datetime-local" class="form-control datepicker" id="date" placeholder="Appointment Date">
+                                <input class="form-control datepicker" id="date" placeholder="Appointment Date" type="datetime-local">
                                 <div class="validate"></div>
                             </div>
                             <div class="col-md-6 form-group">
-                                <select name="barber" id="barber" class="form-control">
+                                <select class="form-control" id="barber" name="barber">
                                     <option value="">Select a barber</option>
                                     <option value="barber 1">John Lewis</option>
                                     <option value="barber 2">Miko Alvares</option>
@@ -286,7 +287,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+                            <textarea class="form-control" name="message" placeholder="Message (Optional)" rows="5"></textarea>
                             <div class="validate"></div>
                         </div>
                         <div class="mb-3">
@@ -317,10 +318,10 @@
                             <div class="col-lg-2 col-md-6 footer-links">
                                 <h4>Useful Links</h4>
                                 <ul>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#barbers">Barbers</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#appointment">Appointment</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="membership">Membership</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3 col-md-6 footer-links">
@@ -343,23 +344,23 @@
                             <strong>MROOM</strong> &copy; <span id="year"></span> by <a href="https://www.linkedin.com/in/mirabbos/" target="_blank">Mirabbos Mirzakhmedov</a>
                         </div>
                         <script>
-                            document.getElementById('year').innerHTML = new Date().getFullYear();
+                            document.getElementById("year").innerHTML = new Date().getFullYear();
                         </script>
                     </div>
                     <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                        <a href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-                        <a href="https://facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="https://instagram.com/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        <a href="https://skype.com/" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
-                        <a href="https://linkedin.com/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                        <a href="https://youtube.com/" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+                        <a class="twitter" href="https://twitter.com/" target="_blank"><i class="bx bxl-twitter"></i></a>
+                        <a class="facebook" href="https://facebook.com/" target="_blank"><i class="bx bxl-facebook"></i></a>
+                        <a class="instagram" href="https://instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                        <a class="google-plus" href="https://skype.com/" target="_blank"><i class="bx bxl-skype"></i></a>
+                        <a class="linkedin" href="https://linkedin.com/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                        <a class="youtube" href="https://youtube.com/" target="_blank"><i class="bx bxl-youtube"></i></a>
                     </div>
                 </div>
             </footer>
         </main>
 
         <script src="assets/vendor/jquery/jquery.min.js"></script>
-        <script src='assets/vendor/venobox/venobox.min.js'></script>
+        <script src="assets/vendor/venobox/venobox.min.js"></script>
         <script src="assets/js/main.js"></script>
 
     </body>

@@ -99,3 +99,12 @@ a:hover {
     color: #1977cc;
     border-color: #1977cc;
 }
+
+.terms-section {
+    margin-top: 16px;
+    text-align: justify;
+}
+
+.information .col-12 {
+    padding-left: 0;
+}
