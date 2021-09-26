@@ -2,13 +2,25 @@ $(document).ready((function ($) {
     'use strict';
 
     var port = (window.location.port) ? ':' + window.location.port : '',
-    appHost = window.location.protocol + '//' +
-        window.location.hostname +
-        port;
+        appHost = window.location.protocol + '//' +
+            window.location.hostname +
+            port;
 
     function signOut() {
-    window.location.href = appHost;
+        window.location.href = appHost;
     }
+
+    var host = 'http://127.0.0.1:8000/';
+
+    $.ajax({
+        type: 'GET',
+        url: host + 'api/current_user/',
+        xhrFields: {withCredentials: true},
+        success: function () {
+            $('#preloader').fadeOut();
+        },
+        error: signOut
+    });
 
 
     var $mobileToggler = $('.t-header-mobile-toggler');
@@ -18,8 +30,7 @@ $(document).ready((function ($) {
     });
 
     $('.signout-button').click(function () {
-        var host = 'http://127.0.0.1:8000/',
-            path = 'api/signout/',
+        var path = 'api/signout/',
             url = host + path;
 
         $.ajax({
