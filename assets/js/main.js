@@ -156,6 +156,32 @@ $(document).ready((function ($) {
         return false;
     });
 
+    $('.appointment-button').click(function () {
+        var $form = $('.appointment-form'),
+            data = getFormData($form),
+            host = 'http://127.0.0.1:8000/',
+            path = 'api/appointment/',
+            url = host + path;
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: JSON.stringify(data),
+            beforeSend: removeFieldErrors,
+            success: function () {
+                $('#section .alert-success').fadeIn(function () {
+                    $(this).fadeOut(14000);
+                });
+                $form.find('input').each(function () {
+                    $(this).val('');
+                    $(this).prop('checked', false);
+                });
+            },
+            error: showFieldErrors,
+        });
+        return false;
+    });
+
     $('.alert .close').click(function () {
         var $alert = $(this).parent();
 
