@@ -55,6 +55,15 @@ a:hover {
     text-align: center;
 }
 
+.navbar-dropdown .dropdown-header .dropdown-title-text {
+    color: #1977cc!important;
+}
+
+.navbar-dropdown .dropdown-header .dropdown-title-text:hover {
+    color: #3291e6!important;
+}
+
+
 .sidebar .navigation-menu li.active a .link-title {
     color: #1977cc;
 }
@@ -108,3 +117,48 @@ a:hover {
 .information .col-12 {
     padding-left: 0;
 }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1977cc;
+  border-top-color: #d1e6f9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+

@@ -46,6 +46,14 @@
     font-size: 23px;
 }
 
+.membership-page .plan-price .mb-0 b{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .membership-page .price-features p{
     letter-spacing: 0.03rem;
     font-size: 14px;
@@ -61,14 +69,6 @@
 .membership-page .upgrade-btn{
     font-size: 0.875rem;
     padding: 8px 20px;
-}
-
-.membership-page .plan-price .mb-0 b{
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.03rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .membership-page .price-box{
