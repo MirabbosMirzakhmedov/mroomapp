@@ -262,26 +262,26 @@
                     <form action="" class="appointment-form" method="post" role="form">
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="name" name="name" placeholder="Your full name" type="text">
+                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="name" name="full_name" placeholder="Your full name" type="text">
                                 <div class="validate"></div>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="phone" name="phone" placeholder="Your phone number" type="tel">
+                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="phone" name="phone_number" placeholder="Your phone number" type="tel">
                                 <div class="validate"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input class="form-control datepicker" id="date" placeholder="Appointment Date" type="datetime-local">
+                                <input class="form-control datepicker" name="date" id="date" placeholder="Appointment Date" type="datetime-local">
                                 <div class="validate"></div>
                             </div>
                             <div class="col-md-6 form-group">
                                 <select class="form-control" id="barber" name="barber">
                                     <option value="">Select a barber</option>
-                                    <option value="barber 1">John Lewis</option>
-                                    <option value="barber 2">Miko Alvares</option>
-                                    <option value="barber 3">Julia Romanova</option>
-                                    <option value="barber 3">Steven Anderson</option>
+                                    <option value="John Lewis">John Lewis</option>
+                                    <option value="Miko Alvares">Miko Alvares</option>
+                                    <option value="Julia Romanova">Julia Romanova</option>
+                                    <option value="Steven Anderson">Steven Anderson</option>
                                 </select>
                                 <div class="validate"></div>
                             </div>

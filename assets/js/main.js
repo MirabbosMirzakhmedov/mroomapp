@@ -162,11 +162,10 @@ $(document).ready((function ($) {
             host = 'http://127.0.0.1:8000/',
             path = 'api/appointment/',
             url = host + path;
-
         $.ajax({
             type: 'POST',
             url: url,
-            data: JSON.stringify(data),
+            data: data,
             beforeSend: removeFieldErrors,
             success: function () {
                 $('#section .alert-success').fadeIn(function () {
@@ -181,14 +180,11 @@ $(document).ready((function ($) {
         });
         return false;
     });
-
     $('.alert .close').click(function () {
         var $alert = $(this).parent();
-
         $alert.fadeOut();
         $alert.dequeue();
     });
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('#header').addClass('header-scrolled');
