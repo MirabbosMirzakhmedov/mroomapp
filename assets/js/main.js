@@ -94,7 +94,7 @@ $(document).ready((function ($) {
             $input.addClass('is-invalid');
 
             if (fieldID === 'detail') {
-                $('.auth-form').find('input').each(function () {
+                $('.auth-form' || '.appointment-form').find('input').each(function () {
                     $(this).val('');
                 });
 
@@ -166,14 +166,14 @@ $(document).ready((function ($) {
             type: 'POST',
             url: url,
             data: data,
-            beforeSend: removeFieldErrors,
             success: function () {
-                $('#section .alert-success').fadeIn(function () {
+                $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
                 $form.find('input').each(function () {
                     $(this).val('');
-                    $(this).prop('checked', false);
+                    $('textarea').val('');
+                    $('select').val('');
                 });
             },
             error: showFieldErrors,
