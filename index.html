@@ -14,6 +14,10 @@
         <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
         <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
+
+        <link href="assets/img/favicons/favicon.ico" rel="icon"/>
+        <link href="assets/img/favicons/favicon-16x16.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="assets/img/favicons/favicon-32x32.png" rel="icon" sizes="16x16" type="image/png">
     </head>
     <body>
         <div class="d-none d-lg-flex align-items-center fixed-top" id="topbar">
@@ -48,6 +52,12 @@
                 <a class="appointment-btn scrollto" href="#appointment">
                     Make an Appointment
                 </a>
+            </div>
+            <div class="alert alert-success" role="alert">
+                Your appointment request has been sent successfully. Thank you!
+                <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                    <span aria-hidden="true" class="font-weight-light">×</span>
+                </button>
             </div>
         </header>
         <section class="d-flex align-items-center" id="hero">
@@ -262,7 +272,7 @@
                     <form action="" class="appointment-form" method="post" role="form">
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="name" name="full_name" placeholder="Your full name" type="text">
+                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="name" name="name" placeholder="Your full name" type="text">
                                 <div class="validate"></div>
                             </div>
                             <div class="col-md-6 form-group">
@@ -272,7 +282,7 @@
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input class="form-control datepicker" name="date" id="date" placeholder="Appointment Date" type="datetime-local">
+                                <input class="form-control datepicker" id="date" name="date" placeholder="Appointment Date" type="datetime-local">
                                 <div class="validate"></div>
                             </div>
                             <div class="col-md-6 form-group">
@@ -286,16 +296,17 @@
                                 <div class="validate"></div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Message (Optional)" rows="5"></textarea>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="alert alert-success" role="alert">
-                            Your appointment request has been sent successfully. Thank you!
-                            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
-                                <span aria-hidden="true" class="font-weight-light">×</span>
-                            </button>
-                        </div>
+
+<!--                        <div class="form-group">-->
+<!--                            <textarea class="form-control" name="message" placeholder="Message (Optional)" rows="5"></textarea>-->
+<!--                            <div class="validate"></div>-->
+<!--                        </div>-->
+<!--                        <div class="alert alert-success" role="alert">-->
+<!--                            Your appointment request has been sent successfully. Thank you!-->
+<!--                            <button aria-label="Close" class="close" data-dismiss="alert" type="button">-->
+<!--                                <span aria-hidden="true" class="font-weight-light">×</span>-->
+<!--                            </button>-->
+<!--                        </div>-->
                         <div class="text-center">
                             <button class="appointment-button" type="submit">Make an Appointment</button>
                         </div>
@@ -363,6 +374,5 @@
         <script src="assets/vendor/jquery/jquery.min.js"></script>
         <script src="assets/vendor/venobox/venobox.min.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>
