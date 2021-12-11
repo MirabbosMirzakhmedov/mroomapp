@@ -145,7 +145,7 @@ $(document).ready((function ($) {
         $.ajax({
             type: 'POST',
             url: url,
-            data: JSON.stringify(data),
+            data: data,
             xhrFields: {withCredentials: true},
             beforeSend: removeFieldErrors,
             success: function () {
@@ -166,15 +166,12 @@ $(document).ready((function ($) {
             type: 'POST',
             url: url,
             data: data,
-            // beforeSend: removeFieldErrors,
             success: function () {
-                // $('#section .alert-success').fadeIn(function () {
                 $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
                 $form.find('input').each(function () {
                     $(this).val('');
-                    // $(this).prop('checked', false);
                     $('textarea').val('');
                     $('select').val('');
                 });
@@ -183,6 +180,7 @@ $(document).ready((function ($) {
         });
         return false;
     });
+
     $('.alert .close').click(function () {
         var $alert = $(this).parent();
         $alert.fadeOut();
