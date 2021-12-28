@@ -8,7 +8,6 @@ $(document).ready((function ($) {
             window.location.hostname +
             port;
 
-
     if ($(navMenu).length) {
         var $mobileNav = $(navMenu).clone().prop({
             class: 'mobile-nav d-lg-none'
@@ -46,7 +45,6 @@ $(document).ready((function ($) {
                     container.has(e.target).length === 0
                 ),
                 mobileMenuActive = $(body).hasClass('mobile-nav-active');
-
             if (isTarget && mobileMenuActive) {
                 $(body).removeClass('mobile-nav-active');
                 $('.mobile-nav-toggle i').toggleClass(
@@ -61,7 +59,6 @@ $(document).ready((function ($) {
 
     function getFormData($form) {
         var data = {};
-
         $.each($form.serializeArray(), function (i, field) {
             if (field.name !== 'terms') {
                 data[field.name] = field.value;
@@ -80,7 +77,8 @@ $(document).ready((function ($) {
     }
 
     function removeFieldErrors() {
-        $('.auth-form').find('input').each(function () {
+        $('.auth-form, .appointment-form')
+        .find('input, select').each(function () {
             $(this).removeClass('is-invalid');
         });
     }
@@ -89,12 +87,10 @@ $(document).ready((function ($) {
         $.each(res.responseJSON, function (fieldID, errorMessage) {
             var $input = $('#' + fieldID),
                 $feedback = $input.parent().find('.invalid-feedback');
-
             $feedback.text(errorMessage);
             $input.addClass('is-invalid');
-
             if (fieldID === 'detail') {
-                $('.auth-form' || '.appointment-form').find('input').each(function () {
+                $('.auth-form, .appointment-form').find('input').each(function () {
                     $(this).val('');
                 });
 
@@ -115,14 +111,13 @@ $(document).ready((function ($) {
             host = 'http://127.0.0.1:8000/',
             path = 'api/signup/',
             url = host + path;
-
         $.ajax({
             type: 'POST',
             url: url,
             data: JSON.stringify(data),
             beforeSend: removeFieldErrors,
             success: function () {
-                $('#header .alert-success').fadeIn(function () {
+                $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
                 $form.find('input').each(function () {
@@ -141,7 +136,6 @@ $(document).ready((function ($) {
             host = 'http://127.0.0.1:8000/',
             path = 'api/signin/',
             url = host + path;
-
         $.ajax({
             type: 'POST',
             url: url,
@@ -166,6 +160,7 @@ $(document).ready((function ($) {
             type: 'POST',
             url: url,
             data: data,
+            beforeSend: removeFieldErrors,
             success: function () {
                 $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
