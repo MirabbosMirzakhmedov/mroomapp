@@ -195,21 +195,18 @@ $(document).ready((function ($) {
         }
     });
 
-
+    var host = 'http://127.0.0.1:8000/',
+        path = 'api/barber/',
+        url = host + path;
     $.ajax({
         type: 'GET',
-        url: 'http://127.0.0.1:8000/',
-        success: function () {
-            $('.select_barber').fadeIn(function () {
-                $(this).fadeOut(14000);
-            });
-            $form.find('input').each(function () {
-                $(this).val('');
-                $('textarea').val('');
-                $('select').val('');
+        url: url,
+        success: function (res) {
+            $.each(res, function (index, barber) {
+                $('#barber_form').append(
+                    '<option value="' + barber.uid + '">' + barber.name +'</option>'
+                );
             });
         },
-        error: showFieldErrors,
     });
-
 })(jQuery));
