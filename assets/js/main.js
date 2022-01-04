@@ -139,7 +139,7 @@ $(document).ready((function ($) {
         $.ajax({
             type: 'POST',
             url: url,
-            data: data,
+            data: JSON.stringify(data),
             xhrFields: {withCredentials: true},
             beforeSend: removeFieldErrors,
             success: function () {
