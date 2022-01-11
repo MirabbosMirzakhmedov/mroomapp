@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>MROOM</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+        <link href="http://127.0.0.1:3000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/css/style.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/css/membership.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/css/product.css" rel="stylesheet">
+        <link href="http://127.0.0.1:3000/img/favicons/favicon.ico" rel="icon"/>
+        <link href="http://127.0.0.1:3000/css/global.css" rel="stylesheet"/>
+
+
+        <style>
+
+            .hidden {
+                display: none;
+            }
+
+            #preloader {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999;
+                overflow: hidden;
+                background: #fff;
+            }
+
+            #preloader:before {
+                content: "";
+                position: fixed;
+                top: calc(50% - 30px);
+                left: calc(50% - 30px);
+                border: 6px solid #1977cc;
+                border-top-color: #d1e6f9;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: animate-preloader 1s linear infinite;
+                animation: animate-preloader 1s linear infinite;
+                box-sizing: border-box;
+            }
+
+            @-webkit-keyframes animate-preloader {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes animate-preloader {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body class="hidden">
+        <div class="d-none d-lg-flex align-items-center fixed-top" id="topbar">
+            <div class="container d-flex">
+                <div class="contact-info mr-auto">
+                    <i class="icofont-envelope"></i> <a
+                        href="mailto:info@m87.lv">info@m87.lv</a>
+                    <i class="icofont-phone"></i> +371 24 970 020
+                    <i class="icofont-google-map"></i> Riga, Latvia.
+                </div>
+                <div class="social-links">
+                    <a class="twitter" href="https://twitter.com/" target="_blank"><i class="icofont-twitter"></i></a>
+                    <a class="facebook" href="https://facebook.com/" target="_blank"><i class="icofont-facebook"></i></a>
+                    <a class="instagram" href="https://instagram.com/" target="_blank"><i class="icofont-instagram"></i></a>
+                    <a class="skype" href="https://skype.com/" target="_blank"><i class="icofont-skype"></i></a>
+                    <a class="linkedin" href="https://linkedin.com/" target="_blank"><i class="icofont-linkedin"></i></a>
+                    <a class="youtube" href="https://youtube.com/" target="_blank"><i class="icofont-youtube-play"></i></a>
+                </div>
+            </div>
+        </div>
+        <header class="fixed-top" id="header">
+            <div class="container d-flex align-items-center">
+                <h1 class="logo mr-auto"><a href="/" data-navigo>MROOM</a></h1>
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li><a href="/" data-navigo>Home</a></li>
+                        <li class=""><a href="membership" data-navigo>Membership</a></li>
+                        <li class="auth-required"><a href="signin" data-navigo>Sign In</a></li>
+                        <li class="auth-required"><a href="signup" data-navigo>Sign Up</a></li>
+                        <li class="authenticated"><a href="dashboard" data-navigo>Dashboard</a></li>
+                    </ul>
+                </nav>
+                <a class="appointment-btn scrollto" href="#appointment">
+                    Make an Appointment
+                </a>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                Registration was successful, <a href="signin" data-navigo class="alert-link">click here</a> to sign in.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span class="font-weight-light" aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="alert alert-danger" role="alert">
+                <div class="text"></div>
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span class="font-weight-light" aria-hidden="true">×</span>
+                </button>
+            </div>
+        </header>
+
+        <!--Dashboard header-->
+        <nav class="t-header">
+            <div class="t-header-brand-wrapper">
+                <h1 class="logo mr-auto">
+                    <a class="desktop" href="/">MROOM</a>
+                    <a class="mobile" href="/">M</a>
+                </h1>
+            </div>
+            <div class="t-header-content-wrapper">
+                <div class="t-header-content">
+                    <button class="t-header-toggler t-header-mobile-toggler d-block d-lg-none">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                    <ul class="nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" class="nav-link" data-toggle="dropdown" href="#" id="appsDropdown">
+                                <i class="mdi mdi-apps mdi-1x"></i>
+                            </a>
+                            <div aria-labelledby="appsDropdown" class="dropdown-menu navbar-dropdown dropdown-menu-right">
+                                <div class="dropdown-header">
+                                    <h6 class="dropdown-title user-name"></h6>
+                                    <a href="terms-landing" class="dropdown-title-text mt-2">See terms and conditions</a>
+                                </div>
+                                <div class="dropdown-footer">
+                                    <a href="#" class="signout-button">Sign out</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Dashboard sidebar-->
+        <div class="page-body">
+            <div class="sidebar">
+                <div class="user-profile">
+                    <div class="display-avatar animated-avatar">
+                        <img alt="profile image" class="profile-img img-lg rounded-circle" src="http://127.0.0.1:3000/vendor/admin-template/img/profile/male/image_1.png">
+                    </div>
+                    <div class="info-wrapper">
+                        <p class="user-name"></p>
+                    </div>
+                </div>
+                <ul class="navigation-menu">
+                    <li class="nav-category-divider">MENU</li>
+                    <li>
+                        <a href="dashboard" data-navigo>
+                            <span class="link-title">Dashboard</span>
+                            <i class="mdi mdi-gauge link-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard/reports/" data-navigo>
+                            <span class="link-title">Reports</span>
+                            <i class="mdi mdi-poll link-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="membership" data-navigo>
+                            <span class="link-title">Membership</span>
+                            <i class="mdi mdi-account-star link-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sidebar-upgrade-banner">
+                    <p class="text-gray">Join the community of <b class="text-primary">MROOM PLATINUM</b> members.</p>
+                    <a class="btn upgrade-btn" href="membership">Become a member</a>
+                </div>
+            </div>
+
+            <!-- Dashboard content -->
+
+            <div class="page-content-wrapper">
+                <div class="page-content-wrapper-inner">
+                    <div class="content-viewport">
+                        <div class="row">
+                            <div class="col-12 py-5">
+                                <h4>Dashboard</h4>
+                                <p class="text-gray">Welcome aboard, <span class="user-name"></span></p>
+                            </div>
+                        </div>
+
+                        <!--Dashboard Page Content-->
+                        <div class="row" id="dashboard">
+
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right order-sm-1">
+                            <ul class="text-gray">
+                                <li><a href="terms-landing">Terms of use</a></li>
+                                <li><a href="contacts">Contact information</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left mt-3 mt-sm-0">
+                            <small class="text-muted d-block">
+                                MROOM &copy; <span id="year"></span> by
+                                <a href="https://www.linkedin.com/in/mirabbos/" target="_blank">Mirabbos Mirzakhmedov</a>
+                            </small>
+                            <script>
+                                document.getElementById("year").innerHTML = new Date().getFullYear();
+                            </script>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+
+        <!-- App content -->
+        <div id="app">
+
+        </div>
+
+        <div id="preloader"></div>
+        <script src="http://127.0.0.1:3000/vendor/jquery/jquery.min.js"></script>
+        <script src="http://127.0.0.1:3000/navigo.min.js"></script>
+        <script src="http://127.0.0.1:3000/app.js"></script>
+        <script src="http://127.0.0.1:3000/vendor/admin-template/js/core.js"></script>
+        <script src="http://127.0.0.1:3000/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="http://127.0.0.1:3000/vendor/chartjs/Chart.min.js"></script>
+        <script src="http://127.0.0.1:3000/vendor/jquery/jquery.min.js"></script>
+
+
+        </div>
+    </body>
+</html>
