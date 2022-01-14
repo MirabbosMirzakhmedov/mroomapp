@@ -269,11 +269,11 @@
                     <form action="" class="appointment-form" method="post" role="form">
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="name" name="name" placeholder="Your full name" type="text">
+                                <input class="form-control" data-rule="minlen:4" id="name" name="name" placeholder="Your full name" type="text">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="phone_number" name="phone_number" placeholder="Your phone number" type="tel">
+                                <input class="form-control" data-rule="minlen:4" id="phone_number" name="phone_number" placeholder="Your phone number" type="tel">
                                 <div class="invalid-feedback"></div>
                             </div>
                         </div>
@@ -286,10 +286,11 @@
                                 <select class="form-control" id="barber_form" name="barber">
                                     <option value="" disabled selected hidden>Select a barber</option>
                                 </select>
+                                <div class="invalid-feedback"></div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Message (optional)" rows="5"></textarea>
+                            <div class="col-md-12 form-group">
+                                <textarea class="form-control" name="message" placeholder="Message (Optional)" rows="5"></textarea>
+                            </div>
                         </div>
                         <div class="text-center">
                             <button class="appointment-button" type="submit">Make an Appointment</button>
@@ -358,6 +359,5 @@
         <script src="assets/vendor/jquery/jquery.min.js"></script>
         <script src="assets/vendor/venobox/venobox.min.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>

@@ -2,12 +2,11 @@ $(document).ready((function ($) {
     "use strict";
 
     var navMenu = '.nav-menu',
-      body = 'body',
-      port = (window.location.port) ? ':' + window.location.port : '',
-      appHost = window.location.protocol + '//' +
-        window.location.hostname +
-        port;
-
+        body = 'body',
+        port = (window.location.port) ? ':' + window.location.port : '',
+        appHost = window.location.protocol + '//' +
+            window.location.hostname +
+            port;
 
     if ($(navMenu).length) {
         var $mobileNav = $(navMenu).clone().prop({
@@ -88,19 +87,17 @@ $(document).ready((function ($) {
     function showFieldErrors(res) {
         $.each(res.responseJSON, function (fieldID, errorMessage) {
             var $input = $('#' + fieldID),
-              $feedback = $input.parent().find('.invalid-feedback');
-
+                $feedback = $input.parent().find('.invalid-feedback');
             $feedback.text(errorMessage);
             $input.addClass('is-invalid');
-
             if (fieldID === 'detail') {
-                $('.auth-form' || '.appointment-form')
+                $('.auth-form, .appointment-form')
                   .find('input').each(function () {
                       $(this).val('');
                 });
 
                 var $alert = $('#header .alert-danger'),
-                  $alertText = $alert.find('.text');
+                    $alertText = $alert.find('.text');
 
                 $alertText.text(errorMessage);
                 $alert.fadeIn(function () {
@@ -116,7 +113,6 @@ $(document).ready((function ($) {
           host = 'http://127.0.0.1:8000/',
           path = 'api/signup/',
           url = host + path;
-
         $.ajax({
             type: 'POST',
             url: url,
@@ -138,11 +134,10 @@ $(document).ready((function ($) {
 
     $('.signin-button').click(function () {
         var $form = $('.auth-form'),
-          data = getFormData($form),
-          host = 'http://127.0.0.1:8000/',
-          path = 'api/signin/',
-          url = host + path;
-
+            data = getFormData($form),
+            host = 'http://127.0.0.1:8000/',
+            path = 'api/signin/',
+            url = host + path;
         $.ajax({
             type: 'POST',
             url: url,
@@ -169,7 +164,7 @@ $(document).ready((function ($) {
             data: data,
             beforeSend: removeFieldErrors,
             success: function () {
-                $('.alert-success').fadeIn(function () {
+                $('#section .alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
                 $form.find('input').each(function () {
