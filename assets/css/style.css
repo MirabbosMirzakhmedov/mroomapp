@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-section .alert-success {
+#header .alert-success {
     margin-top: 15px;
     position: absolute;
     background-color: #ccf6e4;

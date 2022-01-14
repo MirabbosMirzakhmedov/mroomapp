@@ -2,11 +2,11 @@ $(document).ready((function ($) {
     "use strict";
 
     var navMenu = '.nav-menu',
-        body = 'body',
-        port = (window.location.port) ? ':' + window.location.port : '',
-        appHost = window.location.protocol + '//' +
-            window.location.hostname +
-            port;
+      body = 'body',
+      port = (window.location.port) ? ':' + window.location.port : '',
+      appHost = window.location.protocol + '//' +
+        window.location.hostname +
+        port;
 
 
     if ($(navMenu).length) {
@@ -15,42 +15,42 @@ $(document).ready((function ($) {
         });
         $(body).append($mobileNav);
         $(body).prepend(
-            '<button ' +
-            'type="button" ' +
-            'class="mobile-nav-toggle d-lg-none">' +
-            '<i class="icofont-navigation-menu"></i>' +
-            '</button>'
+          '<button ' +
+          'type="button" ' +
+          'class="mobile-nav-toggle d-lg-none">' +
+          '<i class="icofont-navigation-menu"></i>' +
+          '</button>'
         );
         $(body).append(
-            '<div class="mobile-nav-overly"></div>'
+          '<div class="mobile-nav-overly"></div>'
         );
         $(document).on('click', '.mobile-nav-toggle', function (e) {
             $(body).toggleClass('mobile-nav-active');
             $('.mobile-nav-toggle i').toggleClass(
-                'icofont-navigation-menu icofont-close'
+              'icofont-navigation-menu icofont-close'
             );
             $('.mobile-nav-overly').toggle();
         });
         $(document).on(
-            'click',
-            '.mobile-nav .drop-down > a',
-            function (e) {
-                e.preventDefault();
-                $(this).next().slideToggle(300);
-                $(this).parent().toggleClass('active');
-            });
+          'click',
+          '.mobile-nav .drop-down > a',
+          function (e) {
+              e.preventDefault();
+              $(this).next().slideToggle(300);
+              $(this).parent().toggleClass('active');
+          });
         $(document).click(function (e) {
             var container = $(".mobile-nav, .mobile-nav-toggle"),
-                isTarget = (
-                    !container.is(e.target) &&
-                    container.has(e.target).length === 0
-                ),
-                mobileMenuActive = $(body).hasClass('mobile-nav-active');
+              isTarget = (
+                !container.is(e.target) &&
+                container.has(e.target).length === 0
+              ),
+              mobileMenuActive = $(body).hasClass('mobile-nav-active');
 
             if (isTarget && mobileMenuActive) {
                 $(body).removeClass('mobile-nav-active');
                 $('.mobile-nav-toggle i').toggleClass(
-                    'icofont-navigation-menu icofont-close'
+                  'icofont-navigation-menu icofont-close'
                 );
                 $('.mobile-nav-overly').fadeOut();
             }
@@ -70,7 +70,7 @@ $(document).ready((function ($) {
             }
         });
         $form.find(
-            'input[type="checkbox"]:not(:checked)'
+          'input[type="checkbox"]:not(:checked)'
         ).each(function () {
             if ($.inArray(this.name, data) === -1) {
                 data[this.name] = $(this).prop('checked');
@@ -80,7 +80,7 @@ $(document).ready((function ($) {
     }
 
     function removeFieldErrors() {
-        $('.auth-form').find('input').each(function () {
+        $('.auth-form .appointment-form').find('input').each(function () {
             $(this).removeClass('is-invalid');
         });
     }
@@ -88,18 +88,19 @@ $(document).ready((function ($) {
     function showFieldErrors(res) {
         $.each(res.responseJSON, function (fieldID, errorMessage) {
             var $input = $('#' + fieldID),
-                $feedback = $input.parent().find('.invalid-feedback');
+              $feedback = $input.parent().find('.invalid-feedback');
 
             $feedback.text(errorMessage);
             $input.addClass('is-invalid');
 
             if (fieldID === 'detail') {
-                $('.auth-form' || '.appointment-form').find('input').each(function () {
-                    $(this).val('');
+                $('.auth-form' || '.appointment-form')
+                  .find('input').each(function () {
+                      $(this).val('');
                 });
 
                 var $alert = $('#header .alert-danger'),
-                    $alertText = $alert.find('.text');
+                  $alertText = $alert.find('.text');
 
                 $alertText.text(errorMessage);
                 $alert.fadeIn(function () {
@@ -111,10 +112,10 @@ $(document).ready((function ($) {
 
     $('.signup-button').click(function () {
         var $form = $('.auth-form'),
-            data = getFormData($form),
-            host = 'http://127.0.0.1:8000/',
-            path = 'api/signup/',
-            url = host + path;
+          data = getFormData($form),
+          host = 'http://127.0.0.1:8000/',
+          path = 'api/signup/',
+          url = host + path;
 
         $.ajax({
             type: 'POST',
@@ -137,10 +138,10 @@ $(document).ready((function ($) {
 
     $('.signin-button').click(function () {
         var $form = $('.auth-form'),
-            data = getFormData($form),
-            host = 'http://127.0.0.1:8000/',
-            path = 'api/signin/',
-            url = host + path;
+          data = getFormData($form),
+          host = 'http://127.0.0.1:8000/',
+          path = 'api/signin/',
+          url = host + path;
 
         $.ajax({
             type: 'POST',
@@ -158,14 +159,15 @@ $(document).ready((function ($) {
 
     $('.appointment-button').click(function () {
         var $form = $('.appointment-form'),
-            data = getFormData($form),
-            host = 'http://127.0.0.1:8000/',
-            path = 'api/appointment/',
-            url = host + path;
+          data = getFormData($form),
+          host = 'http://127.0.0.1:8000/',
+          path = 'api/appointment/',
+          url = host + path;
         $.ajax({
             type: 'POST',
             url: url,
             data: data,
+            beforeSend: removeFieldErrors,
             success: function () {
                 $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
@@ -196,15 +198,15 @@ $(document).ready((function ($) {
     });
 
     var host = 'http://127.0.0.1:8000/',
-        path = 'api/barber/',
-        url = host + path;
+      path = 'api/barber/',
+      url = host + path;
     $.ajax({
         type: 'GET',
         url: url,
         success: function (res) {
             $.each(res, function (index, barber) {
                 $('#barber_form').append(
-                    '<option value="' + barber.uid + '">' + barber.name +'</option>'
+                  '<option value="' + barber.uid + '">' + barber.name + '</option>'
                 );
             });
         },
