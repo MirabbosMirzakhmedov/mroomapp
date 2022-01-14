@@ -11,23 +11,23 @@ $(document).ready((function ($) {
         var css = {
             'app': [
                 "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i",
-                "http://127.0.0.1:3000/vendor/bootstrap/css/bootstrap.min.css",
-                "http://127.0.0.1:3000/vendor/icofont/icofont.min.css",
-                "http://127.0.0.1:3000/vendor/boxicons/css/boxicons.min.css",
-                "http://127.0.0.1:3000/vendor/remixicon/remixicon.css",
-                "http://127.0.0.1:3000/css/style.css",
-                "http://127.0.0.1:3000/css/membership.css",
-                "http://127.0.0.1:3000/css/product.css",
-                "http://127.0.0.1:3000/img/favicons/favicon.ico",
-                "http://127.0.0.1:3000/css/global.css",
+                "/vendor/bootstrap/css/bootstrap.min.css",
+                "/vendor/icofont/icofont.min.css",
+                "/vendor/boxicons/css/boxicons.min.css",
+                "/vendor/remixicon/remixicon.css",
+                "/css/style.css",
+                "/css/membership.css",
+                "/css/product.css",
+                "/img/favicons/favicon.ico",
+                "/css/global.css",
             ],
             'dashboard': [
                 "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i",
-                "http://127.0.0.1:3000/vendor/icofont/materialdesignicons.css",
-                "http://127.0.0.1:3000/vendor/admin-template/css/template.style.css",
-                "http://127.0.0.1:3000/vendor/admin-template/css/layout.style.css",
-                "http://127.0.0.1:3000/css/dashboard.css",
-                "http://127.0.0.1:3000/css/global.css",
+                "/vendor/icofont/materialdesignicons.css",
+                "/vendor/admin-template/css/template.style.css",
+                "/vendor/admin-template/css/layout.style.css",
+                "/css/dashboard.css",
+                "/css/global.css",
             ]
         };
 

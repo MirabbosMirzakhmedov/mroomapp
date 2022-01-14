@@ -6,16 +6,11 @@ $(document).ready((function ($) {
         window.router.navigate('/');
     }
 
-    var host = 'http://127.0.0.1:8000/';
-
 
     $('.signout-button').click(function () {
-        var path = 'api/signout/',
-          url = host + path;
-
         $.ajax({
             type: 'POST',
-            url: url,
+            url: window.config.api + 'api/signout',
             xhrFields: {withCredentials: true},
             success: signOut,
             error: signOut

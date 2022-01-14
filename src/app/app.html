@@ -8,20 +8,6 @@
         <meta content="" name="description">
         <meta content="" name="keywords">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-
-        <link href="http://127.0.0.1:3000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/vendor/icofont/icofont.min.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/vendor/remixicon/remixicon.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/css/style.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/css/membership.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/css/product.css" rel="stylesheet">
-        <link href="http://127.0.0.1:3000/img/favicons/favicon.ico" rel="icon"/>
-        <link href="http://127.0.0.1:3000/css/global.css" rel="stylesheet"/>
-
-
         <style>
 
             .hidden {
@@ -105,7 +91,7 @@
                         <li class="authenticated"><a href="dashboard" data-navigo>Dashboard</a></li>
                     </ul>
                 </nav>
-                <a class="appointment-btn scrollto" href="#appointment">
+                <a class="appointment-btn scrollto" href="#appointment" data-navigo>
                     Make an Appointment
                 </a>
             </div>
@@ -128,8 +114,8 @@
         <nav class="t-header">
             <div class="t-header-brand-wrapper">
                 <h1 class="logo mr-auto">
-                    <a class="desktop" href="/">MROOM</a>
-                    <a class="mobile" href="/">M</a>
+                    <a class="desktop" href="/" data-navigo>MROOM</a>
+                    <a class="mobile" href="/" data-navigo>M</a>
                 </h1>
             </div>
             <div class="t-header-content-wrapper">
@@ -145,10 +131,10 @@
                             <div aria-labelledby="appsDropdown" class="dropdown-menu navbar-dropdown dropdown-menu-right">
                                 <div class="dropdown-header">
                                     <h6 class="dropdown-title user-name"></h6>
-                                    <a href="terms-landing" class="dropdown-title-text mt-2">See terms and conditions</a>
+                                    <a href="terms-landing" class="dropdown-title-text mt-2" data-navigo>See terms and conditions</a>
                                 </div>
                                 <div class="dropdown-footer">
-                                    <a href="#" class="signout-button">Sign out</a>
+                                    <a href="#" class="signout-button" data-navigo>Sign out</a>
                                 </div>
                             </div>
                         </li>
@@ -191,7 +177,7 @@
                 </ul>
                 <div class="sidebar-upgrade-banner">
                     <p class="text-gray">Join the community of <b class="text-primary">MROOM PLATINUM</b> members.</p>
-                    <a class="btn upgrade-btn" href="membership">Become a member</a>
+                    <a class="btn upgrade-btn" href="membership" data-navigo>Become a member</a>
                 </div>
             </div>
 
@@ -217,8 +203,8 @@
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right order-sm-1">
                             <ul class="text-gray">
-                                <li><a href="terms-landing">Terms of use</a></li>
-                                <li><a href="contacts">Contact information</a></li>
+                                <li><a href="terms-landing" data-navigo>Terms of use</a></li>
+                                <li><a href="contacts" data-navigo>Contact information</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left mt-3 mt-sm-0">
@@ -242,13 +228,14 @@
         </div>
 
         <div id="preloader"></div>
-        <script src="http://127.0.0.1:3000/vendor/jquery/jquery.min.js"></script>
-        <script src="http://127.0.0.1:3000/navigo.min.js"></script>
-        <script src="http://127.0.0.1:3000/app.js"></script>
-        <script src="http://127.0.0.1:3000/vendor/admin-template/js/core.js"></script>
-        <script src="http://127.0.0.1:3000/vendor/apexcharts/apexcharts.min.js"></script>
-        <script src="http://127.0.0.1:3000/vendor/chartjs/Chart.min.js"></script>
-        <script src="http://127.0.0.1:3000/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/navigo.min.js"></script>
+        <script src="/app.js"></script>
+        <script src="/vendor/admin-template/js/core.js"></script>
+        <script src="/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="/vendor/chartjs/Chart.min.js"></script>
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/config.js"></script>
 
 
         </div>

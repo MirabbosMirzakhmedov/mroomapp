@@ -51,13 +51,10 @@ $(document).ready((function ($) {
 
     $('.signup-button').click(function () {
         var $form = $('.auth-form'),
-            data = getFormData($form),
-            host = 'http://127.0.0.1:8000/',
-            path = 'api/signup/',
-            url = host + path;
+            data = getFormData($form);
         $.ajax({
             type: 'POST',
-            url: url,
+            url: window.config.api + 'api/signup/',
             data: JSON.stringify(data),
             beforeSend: removeFieldErrors,
             success: function () {
@@ -76,14 +73,10 @@ $(document).ready((function ($) {
 
     $('.signin-button').click(function () {
         var $form = $('.auth-form'),
-            data = getFormData($form),
-            host = 'http://127.0.0.1:8000/',
-            path = 'api/signin/',
-            url = host + path;
-
+            data = getFormData($form);
         $.ajax({
             type: 'POST',
-            url: url,
+            url: window.config.api + 'api/signin/',
             data: JSON.stringify(data),
             xhrFields: {withCredentials: true},
             beforeSend: removeFieldErrors,
@@ -97,13 +90,10 @@ $(document).ready((function ($) {
 
     $('.appointment-button').click(function () {
         var $form = $('.appointment-form'),
-            data = getFormData($form),
-            host = 'http://127.0.0.1:8000/',
-            path = 'api/appointment/',
-            url = host + path;
+            data = getFormData($form);
         $.ajax({
             type: 'POST',
-            url: url,
+            url: window.config.api + 'api/appointment/',
             data: data,
             beforeSend: removeFieldErrors,
             success: function () {
