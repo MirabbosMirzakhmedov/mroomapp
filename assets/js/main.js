@@ -79,7 +79,7 @@ $(document).ready((function ($) {
     }
 
     function removeFieldErrors() {
-        $('.auth-form .appointment-form').find('input').each(function () {
+        $('.auth-form, .appointment-form').find('input').each(function () {
             $(this).removeClass('is-invalid');
         });
     }
