@@ -164,7 +164,7 @@ $(document).ready((function ($) {
             data: data,
             beforeSend: removeFieldErrors,
             success: function () {
-                $('#section .alert-success').fadeIn(function () {
+                $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
                 });
                 $form.find('input').each(function () {
