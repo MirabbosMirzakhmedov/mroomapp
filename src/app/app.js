@@ -15,7 +15,7 @@ $(document).ready((function ($) {
                 "/vendor/icofont/icofont.min.css",
                 "/vendor/boxicons/css/boxicons.min.css",
                 "/vendor/remixicon/remixicon.css",
-                "/css/style.css",
+                "/css/app.css",
                 "/css/membership.css",
                 "/css/product.css",
                 "/img/favicons/favicon.ico",
@@ -32,9 +32,6 @@ $(document).ready((function ($) {
         };
 
         window.user = null;
-        window.config = {
-            'preloaderDuration': 100
-        };
         window.state = null;
         window.router = router;
         window.routes = {
@@ -238,7 +235,6 @@ $(document).ready((function ($) {
                         '">'
                       )
                     );
-
                 }
 
                 toggleAppElements(route.state === 'app');
@@ -252,8 +248,6 @@ $(document).ready((function ($) {
               match.route.path,
               $(route.menuItems)
             );
-
-            var host = 'http://127.0.0.1:8000/';
 
             function loadPage() {
                 $(route.selector).load(
@@ -290,16 +284,13 @@ $(document).ready((function ($) {
                     loadPage();
                 }
             }
-
             $.ajax({
                 type: 'GET',
-                url: host + 'api/current_user/',
+                url: window.config.api + 'api/current_user/',
                 xhrFields: {withCredentials: true},
                 success: success,
                 error: error,
             });
-
-
         }
 
         function after(match) {
