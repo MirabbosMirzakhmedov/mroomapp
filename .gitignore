@@ -1,3 +1,5 @@
 # Editors
 .idea/
 
+node_modules/
+src/.env.dev
