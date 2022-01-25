@@ -10,7 +10,7 @@ $(document).ready((function ($) {
     $('.signout-button').click(function () {
         $.ajax({
             type: 'POST',
-            url: window.config.api + 'api/signout',
+            url: window.config.api + 'api/signout/',
             xhrFields: {withCredentials: true},
             success: signOut,
             error: signOut
