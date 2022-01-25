@@ -110,6 +110,14 @@ $(document).ready((function ($) {
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
+                'dashboard/contacts': {
+                    'state': 'dashboard',
+                    'selector': '#dashboard',
+                    'template': '/dashboard/contacts/contacts.html',
+                    'controller': '/dashboard/contacts/contacts.js',
+                    'css': css.dashboard,
+                    'menuItems': '.sidebar .navigation-menu li',
+                },
             };
 
 
@@ -376,6 +384,13 @@ $(document).ready((function ($) {
                         after: after,
                     })
                 .on('/dashboard/terms-dashboard',
+                    function () {
+                    },
+                    {
+                        before: before,
+                        after: after,
+                    })
+                .on('/dashboard/contacts',
                     function () {
                     },
                     {
