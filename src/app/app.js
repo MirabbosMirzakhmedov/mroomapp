@@ -118,6 +118,14 @@ $(document).ready((function ($) {
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
+                'dashboard/user-membership/gold': {
+                    'state': 'dashboard',
+                    'selector': '#dashboard',
+                    'template': '/dashboard/user-membership/gold/gold.html',
+                    'controller': '/dashboard/user-membership/gold/gold.js',
+                    'css': css.dashboard,
+                    'menuItems': '.sidebar .navigation-menu li',
+                },
             };
 
 
@@ -391,6 +399,13 @@ $(document).ready((function ($) {
                         after: after,
                     })
                 .on('/dashboard/contacts',
+                    function () {
+                    },
+                    {
+                        before: before,
+                        after: after,
+                    })
+                .on('/dashboard/user-membership/gold',
                     function () {
                     },
                     {
