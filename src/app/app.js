@@ -94,11 +94,11 @@ $(document).ready((function ($) {
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
-                'dashboard/user_membership': {
+                'dashboard/user-membership': {
                     'state': 'dashboard',
                     'selector': '#dashboard',
-                    'template': '/dashboard/user_membership/user_membership.html',
-                    'controller': '/dashboard/user_membership/user_membership.js',
+                    'template': '/dashboard/user-membership/user-membership.html',
+                    'controller': '/dashboard/user-membership/user-membership.js',
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
@@ -360,7 +360,7 @@ $(document).ready((function ($) {
                         before: before,
                         after: after,
                     })
-                .on('/dashboard/user_membership',
+                .on('/dashboard/user-membership',
                     function () {
                     },
                     {
