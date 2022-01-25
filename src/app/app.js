@@ -102,6 +102,14 @@ $(document).ready((function ($) {
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
+                'dashboard/terms-dashboard': {
+                    'state': 'dashboard',
+                    'selector': '#dashboard',
+                    'template': '/dashboard/terms-dashboard/terms-dashboard.html',
+                    'controller': '/dashboard/terms-dashboard/terms-dashboard.js',
+                    'css': css.dashboard,
+                    'menuItems': '.sidebar .navigation-menu li',
+                },
             };
 
 
@@ -361,6 +369,13 @@ $(document).ready((function ($) {
                         after: after,
                     })
                 .on('/dashboard/user-membership',
+                    function () {
+                    },
+                    {
+                        before: before,
+                        after: after,
+                    })
+                .on('/dashboard/terms-dashboard',
                     function () {
                     },
                     {
