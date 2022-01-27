@@ -112,8 +112,8 @@ $(document).ready((function ($) {
                 'dashboard/terms': {
                     'state': 'dashboard',
                     'selector': '#dashboard',
-                    'template': '/dashboard/terms-dashboard/terms-dashboard.html',
-                    'controller': '/dashboard/terms-dashboard/terms-dashboard.js',
+                    'template': '/dashboard/terms/terms.html',
+                    'controller': '/dashboard/terms/terms.js',
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
