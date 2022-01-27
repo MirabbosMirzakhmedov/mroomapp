@@ -17,6 +17,7 @@ $(document).ready((function ($) {
         });
     });
 
+
     var $mobileToggler = $('.t-header-mobile-toggler');
 
     $mobileToggler.unbind('click');

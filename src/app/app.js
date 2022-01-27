@@ -30,7 +30,6 @@ $(document).ready((function ($) {
                     "/css/global.css",
                     "/css/membership.css",
                     "/css/product.css",
-
                 ]
             };
 
@@ -70,10 +69,10 @@ $(document).ready((function ($) {
                     'menuItems': '#header .container nav ul li',
                     'css': css.app,
                 },
-                'terms-landing': {
+                'terms': {
                     'state': 'app',
                     'selector': '#app',
-                    'template': '/terms-landing/terms-landing.html',
+                    'template': '/terms/terms.html',
                     'controller': '/auth/auth.js',
                     'menuItems': '#header .container nav ul li',
                     'css': css.app,
@@ -94,15 +93,23 @@ $(document).ready((function ($) {
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
-                'dashboard/user-membership': {
+                'dashboard/membership': {
                     'state': 'dashboard',
                     'selector': '#dashboard',
-                    'template': '/dashboard/user-membership/user-membership.html',
-                    'controller': '/dashboard/user-membership/user-membership.js',
+                    'template': '/dashboard/membership/membership.html',
+                    'controller': '/dashboard/membership/membership.js',
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
-                'dashboard/terms-dashboard': {
+                'dashboard/membership/:package': {
+                    'state': 'dashboard',
+                    'selector': '#dashboard',
+                    'template': '/dashboard/membership/package/package.html',
+                    'controller': '/dashboard/membership/package/package.js',
+                    'css': css.dashboard,
+                    'menuItems': '.sidebar .navigation-menu li',
+                },
+                'dashboard/terms': {
                     'state': 'dashboard',
                     'selector': '#dashboard',
                     'template': '/dashboard/terms-dashboard/terms-dashboard.html',
@@ -115,14 +122,6 @@ $(document).ready((function ($) {
                     'selector': '#dashboard',
                     'template': '/dashboard/contacts/contacts.html',
                     'controller': '/dashboard/contacts/contacts.js',
-                    'css': css.dashboard,
-                    'menuItems': '.sidebar .navigation-menu li',
-                },
-                'dashboard/user-membership/gold': {
-                    'state': 'dashboard',
-                    'selector': '#dashboard',
-                    'template': '/dashboard/user-membership/gold/gold.html',
-                    'controller': '/dashboard/user-membership/gold/gold.js',
                     'css': css.dashboard,
                     'menuItems': '.sidebar .navigation-menu li',
                 },
@@ -363,7 +362,7 @@ $(document).ready((function ($) {
                         before: before,
                         after: after,
                     })
-                .on('/terms-landing',
+                .on('/terms',
                     function () {
                     },
                     {
@@ -384,14 +383,21 @@ $(document).ready((function ($) {
                         before: before,
                         after: after,
                     })
-                .on('/dashboard/user-membership',
+                .on('/dashboard/membership',
                     function () {
                     },
                     {
                         before: before,
                         after: after,
                     })
-                .on('/dashboard/terms-dashboard',
+                .on('/dashboard/membership/:package',
+                    function () {
+                    },
+                    {
+                        before: before,
+                        after: after,
+                    })
+                .on('/dashboard/terms',
                     function () {
                     },
                     {
@@ -405,14 +411,6 @@ $(document).ready((function ($) {
                         before: before,
                         after: after,
                     })
-                .on('/dashboard/user-membership/gold',
-                    function () {
-                    },
-                    {
-                        before: before,
-                        after: after,
-                    })
-
                 .notFound(function () {
                     router.navigate('/');
                 })
