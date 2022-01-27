@@ -2,5 +2,5 @@
 .idea/
 node_modules/
 src/.env.dev
-.yarn/releases/yarn-3.1.1.cjs
+.yarn
 
