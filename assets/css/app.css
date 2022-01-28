@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     height: 40px;
     font-size: 14px;
-    /*transition: all 0.5s;*/
+    transition: all 0.5s;
 }
 
 #topbar.topbar-scrolled {
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .social-links a {
     color: #437099;
-    /*padding-left: 15px;*/
+    padding-left: 15px;
     display: inline-block;
     line-height: 1px;
 }
@@ -80,11 +80,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #header {
     background: #fff;
-    /*transition: all 0.5s;*/
     z-index: 997;
     padding: 15px 0;
     top: 40px;
     box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+    transition: all 0.5s;
 }
 
 #header.header-scrolled {
@@ -661,7 +661,7 @@ section {
 }
 
 .barbers .member .pic img {
-    /*transition: ease-in-out 0.3s;*/
+    transition: ease-in-out 0.3s;
 }
 
 .barbers .member:hover img {
@@ -711,7 +711,6 @@ section {
 }
 
 .barbers .member .social a {
-    /*transition: ease-in-out 0.3s;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -745,7 +744,8 @@ section {
     text-align: center;
     border: 1px solid #d5e1ed;
     padding: 80px 20px;
-    /*transition: all ease-in-out 0.3s;*/
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
 }
 
 .services .icon-box .icon {
@@ -754,12 +754,12 @@ section {
     height: 64px;
     background: #1977cc;
     border-radius: 5px;
-    /*transition: all .3s ease-out 0s;*/
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     transform-style: preserve-3d;
+    transition: all .3s ease-in-out 0s;
 }
 
 .services .icon-box .icon i {
@@ -776,8 +776,8 @@ section {
     width: 100%;
     background: #badaf7;
     border-radius: 5px;
-    /*transition: all .3s ease-out 0s;*/
     transform: translateZ(-1px);
+    transition: all .3s ease-in-out 0s;
 }
 
 .services .icon-box h4 {
@@ -905,8 +905,8 @@ section {
     border: 0;
     padding: 10px 35px;
     color: #fff;
-    /*transition: 0.4s;*/
     border-radius: 50px;
+    transition: 0.4s;
 }
 
 .appointment .appointment-form button[type="submit"]:hover {
@@ -988,7 +988,6 @@ section {
 
 #footer .footer-top .footer-links ul a {
     color: #777777;
-    /*transition: 0.3s;*/
     display: inline-block;
     line-height: 1;
 }
@@ -1038,7 +1037,6 @@ section {
     padding: 0 20px;
     background: #1977cc;
     color: #fff;
-    /*transition: 0.3s;*/
     border-radius: 50px;
 }
 
@@ -1064,7 +1062,6 @@ section {
     text-align: center;
     width: 36px;
     height: 36px;
-    /*transition: 0.3s;*/
 }
 
 #footer .social-links a:hover {
@@ -1257,7 +1254,6 @@ section {
     border: 0;
     padding: 10px 35px;
     color: #fff;
-    /*transition: 0.4s;*/
     border-radius: 50px;
 
 }

@@ -11,7 +11,7 @@ $(document).ready((function ($) {
             }
         });
         $form.find(
-            'input[type="checkbox"]:not(:checked)'
+          'input[type="checkbox"]:not(:checked)'
         ).each(function () {
             if ($.inArray(this.name, data) === -1) {
                 data[this.name] = $(this).prop('checked');
@@ -22,7 +22,7 @@ $(document).ready((function ($) {
 
     function removeFieldErrors() {
         $('.auth-form, .appointment-form')
-            .find('input, select').each(function () {
+          .find('input, select').each(function () {
             $(this).removeClass('is-invalid');
         });
     }
@@ -30,7 +30,7 @@ $(document).ready((function ($) {
     function showFieldErrors(res) {
         $.each(res.responseJSON, function (fieldID, errorMessage) {
             var $input = $('#' + fieldID),
-                $feedback = $input.parent().find('.invalid-feedback');
+              $feedback = $input.parent().find('.invalid-feedback');
             $feedback.text(errorMessage);
             $input.addClass('is-invalid');
             if (fieldID === 'detail') {
@@ -39,7 +39,7 @@ $(document).ready((function ($) {
                 });
 
                 var $alert = $('#header .alert-danger'),
-                    $alertText = $alert.find('.text');
+                  $alertText = $alert.find('.text');
 
                 $alertText.text(errorMessage);
                 $alert.fadeIn(function () {
@@ -51,7 +51,7 @@ $(document).ready((function ($) {
 
     $('.signup-button').click(function () {
         var $form = $('.auth-form'),
-            data = getFormData($form);
+          data = getFormData($form);
         $.ajax({
             type: 'POST',
             url: window.config.api + 'api/signup/',
@@ -73,7 +73,7 @@ $(document).ready((function ($) {
 
     $('.signin-button').click(function () {
         var $form = $('.auth-form'),
-            data = getFormData($form);
+          data = getFormData($form);
         $.ajax({
             type: 'POST',
             url: window.config.api + 'api/signin/',
@@ -88,42 +88,17 @@ $(document).ready((function ($) {
         return false;
     });
 
-    $('.appointment-button').click(function () {
-        var $form = $('.appointment-form'),
-            data = getFormData($form);
-        $.ajax({
-            type: 'POST',
-            url: window.config.api + 'api/appointment/',
-            data: data,
-            beforeSend: removeFieldErrors,
-            success: function () {
-                $('.alert-success').fadeIn(function () {
-                    $(this).fadeOut(14000);
-                });
-                $form.find('input').each(function () {
-                    $(this).val('');
-                    $('textarea').val('');
-                    $('select').val('');
-                });
-            },
-            error: showFieldErrors,
-        });
-        return false;
-    });
-
     $('.alert .close').click(function () {
         var $alert = $(this).parent();
         $alert.fadeOut();
         $alert.dequeue();
     });
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('#header').addClass('header-scrolled');
-            $('#topbar').addClass('topbar-scrolled');
-        } else {
-            $('#header').removeClass('header-scrolled');
-            $('#topbar').removeClass('topbar-scrolled');
-        }
+        var scrolled = $(this).scrollTop() > 100;
+
+        $('#header').toggleClass('header-scrolled', scrolled);
+        $('#topbar').toggleClass('topbar-scrolled', scrolled);
     });
 
     $('#preloader').fadeOut(window.config.preloaderDuration);
