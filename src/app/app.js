@@ -300,6 +300,25 @@ $(document).ready((function ($) {
         $alert.dequeue();
     });
 
+    window.getFormData = function($form) {
+        var data = {};
+        $.each($form.serializeArray(), function (i, field) {
+            if (field.name !== 'terms') {
+                data[field.name] = field.value;
+            } else {
+                data[field.name] = true;
+            }
+        });
+        $form.find(
+          'input[type="checkbox"]:not(:checked)'
+        ).each(function () {
+            if ($.inArray(this.name, data) === -1) {
+                data[this.name] = $(this).prop('checked');
+            }
+        });
+        return data;
+    }
+
     function before(done, match) {
         var route = window.routes[match.route.path];
 

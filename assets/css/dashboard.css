@@ -6,15 +6,6 @@ a:hover {
     color: #3291e6;
 }
 
-.go-back {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-}
-
-
 .t-header .t-header-brand-wrapper {
     padding-left: 0;
 }
