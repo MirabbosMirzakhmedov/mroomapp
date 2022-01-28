@@ -20,35 +20,6 @@ $(document).ready((function ($) {
         return data;
     }
 
-    function removeFieldErrors() {
-        $('.auth-form, .appointment-form')
-          .find('input, select').each(function () {
-            $(this).removeClass('is-invalid');
-        });
-    }
-
-    function showFieldErrors(res) {
-        $.each(res.responseJSON, function (fieldID, errorMessage) {
-            var $input = $('#' + fieldID),
-              $feedback = $input.parent().find('.invalid-feedback');
-            $feedback.text(errorMessage);
-            $input.addClass('is-invalid');
-            if (fieldID === 'detail') {
-                $('.auth-form, .appointment-form').find('input').each(function () {
-                    $(this).val('');
-                });
-
-                var $alert = $('#header .alert-danger'),
-                  $alertText = $alert.find('.text');
-
-                $alertText.text(errorMessage);
-                $alert.fadeIn(function () {
-                    $(this).fadeOut(14000);
-                });
-            }
-        });
-    }
-
     $('.signup-button').click(function () {
         var $form = $('.auth-form'),
           data = getFormData($form);
@@ -56,7 +27,7 @@ $(document).ready((function ($) {
             type: 'POST',
             url: window.config.api + 'api/signup/',
             data: JSON.stringify(data),
-            beforeSend: removeFieldErrors,
+            beforeSend: window.removeFieldErrors,
             success: function () {
                 $('.alert-success').fadeIn(function () {
                     $(this).fadeOut(14000);
@@ -66,7 +37,7 @@ $(document).ready((function ($) {
                     $(this).prop('checked', false);
                 });
             },
-            error: showFieldErrors,
+            error: window.showFieldErrors,
         });
         return false;
     });
@@ -79,19 +50,13 @@ $(document).ready((function ($) {
             url: window.config.api + 'api/signin/',
             data: JSON.stringify(data),
             xhrFields: {withCredentials: true},
-            beforeSend: removeFieldErrors,
+            beforeSend: window.removeFieldErrors,
             success: function () {
                 window.router.navigate('dashboard');
             },
-            error: showFieldErrors,
+            error: window.showFieldErrors,
         });
         return false;
-    });
-
-    $('.alert .close').click(function () {
-        var $alert = $(this).parent();
-        $alert.fadeOut();
-        $alert.dequeue();
     });
 
     $(window).scroll(function () {

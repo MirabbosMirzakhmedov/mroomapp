@@ -1,23 +1,6 @@
 $(document).ready((function ($) {
     'use strict';
 
-
-    function signOut() {
-        window.router.navigate('/');
-    }
-
-
-    $('.signout-button').click(function () {
-        $.ajax({
-            type: 'POST',
-            url: window.config.api + 'api/signout/',
-            xhrFields: {withCredentials: true},
-            success: signOut,
-            error: signOut
-        });
-    });
-
-
     var $mobileToggler = $('.t-header-mobile-toggler');
 
     $mobileToggler.unbind('click');

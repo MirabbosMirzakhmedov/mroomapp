@@ -227,6 +227,11 @@ $(document).ready((function ($) {
               if (href.startsWith('/')) {
                   href = href.substr(1);
               }
+
+              if (href.startsWith('/signout/')) {
+                  href = href.substr(1);
+              }
+
               if (href.endsWith('/')) {
                   var lastSlashIndex = href.length - 1;
                   href = (
@@ -260,14 +265,14 @@ $(document).ready((function ($) {
         $('body').toggleClass('header-fixed', state);
     }
 
-    function removeFieldErrors() {
+    window.removeFieldErrors = function () {
         $('.auth-form, .appointment-form')
           .find('input, select').each(function () {
             $(this).removeClass('is-invalid');
         });
-    }
+    };
 
-    function showFieldErrors(res) {
+    window.showFieldErrors = function (res) {
         $.each(res.responseJSON, function (fieldID, errorMessage) {
             var $input = $('#' + fieldID),
               $feedback = $input.parent().find('.invalid-feedback');
@@ -287,7 +292,7 @@ $(document).ready((function ($) {
                 });
             }
         });
-    }
+    };
 
     $('.alert .close').click(function () {
         var $alert = $(this).parent();
