@@ -39,14 +39,7 @@ $(document).ready((function ($) {
         });
         return false;
     });
-
-    $(window).scroll(function () {
-        var scrolled = $(this).scrollTop() > 100;
-
-        $('#header').toggleClass('header-scrolled', scrolled);
-        $('#topbar').toggleClass('topbar-scrolled', scrolled);
-    });
-
+    
     $('#preloader').fadeOut(window.config.preloaderDuration);
 
 })(jQuery));
