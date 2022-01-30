@@ -109,7 +109,19 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 40px;
 }
 
-.alert-success {
+#header .alert-success {
+    margin-top: 15px;
+    position: absolute;
+    background-color: #ccf6e4;
+    border-color: #b8f2da;
+    color: #006d3f;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+    display: none;
+}
+
+#header .alert-success {
     margin-top: 15px;
     position: absolute;
     background-color: #ccf6e4;
