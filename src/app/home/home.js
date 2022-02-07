@@ -30,6 +30,17 @@ $(document).ready((function ($) {
         }, 500);
     }
 
+    $.ajax({
+        type: 'GET',
+        url: window.config.api + 'api/barber/',
+        success: function (res) {
+            $.each(res, function (index, barber) {
+                $('#barber_form').append(
+                  '<option value="' + barber.uid + '">' + barber.name + '</option>'
+                );
+            });
+        },
+    });
 
     $('#preloader').fadeOut(window.config.preloaderDuration);
 
