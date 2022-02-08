@@ -319,6 +319,13 @@ $(document).ready((function ($) {
         return data;
     }
 
+    $(window).scroll(function () {
+        var scrolled = $(this).scrollTop() > 100;
+
+        $('#header').toggleClass('header-scrolled', scrolled);
+        $('#topbar').toggleClass('topbar-scrolled', scrolled);
+    });
+
     function before(done, match) {
         var route = window.routes[match.route.path];
 
@@ -392,13 +399,6 @@ $(document).ready((function ($) {
                 loadPage();
             }
         }
-
-        $(window).scroll(function () {
-            var scrolled = $(this).scrollTop() > 100;
-
-            $('#header').toggleClass('header-scrolled', scrolled);
-            $('#topbar').toggleClass('topbar-scrolled', scrolled);
-        });
 
         $.ajax({
             type: 'GET',
